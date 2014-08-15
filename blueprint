@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>greatbigsled</title>
+	<link rel="stylesheet" type="text/css" href="http://greatbigsled.github.io/temporary.css">
+</head>
+<body>
+	<header>
+		<a id="hedr" href="http://greatbigsled.github.io/index.html">Home</a>
+	</header>
+	
+
+
+
+	<div class="body">
+	
+	</div>
+	
+
+
+	<footer>
+		<p>For convenience. 2014</p>
+	</footer>
+</body>
+</html>
