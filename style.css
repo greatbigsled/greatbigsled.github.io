@@ -1,0 +1,87 @@
+/**********/
+/* GLOBAL */
+/**********/
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: #000;
+}
+
+a{
+	text-decoration: none;
+	color: #AFEDD6;
+}
+
+/**********/
+/* HEADER */
+/**********/
+#header{
+	width: 800px;
+	padding: 10px;
+	margin: auto;
+	background: #fff;
+	text-align: center;
+}
+
+h1 {
+	font-family: "Friz Quadrata", Georgia, 'Times New Roman', Times, serif;
+	font-size: 500%;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: #FC2A00;
+	margin: 0px auto 0px; 
+}
+#stone{
+	color:#3A4F47;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+li {
+	display: inline;
+	padding: 5px;
+	font-family: "Friz Quadrata", Georgia, 'Times New Roman', Times, serif;
+	font-size: 200%;
+	font-variant: small-caps;
+}
+
+
+/************/
+/* CITATION */
+/************/
+
+#citate{
+	font-family: "Friz Quadrata", Georgia, 'Times New Roman', Times, serif;
+	font-size: 300%;
+	background: #fff;
+
+
+}
+#citate p{
+	margin:20px;
+}
+
+/**********/
+/* IMAGES */
+/**********/
+#heroes{
+	background: #fff;
+	width: 800px;
+	margin: auto; 
+	
+}
+
+.row{
+	padding: 20px 0;
+}
+
+img {
+	height: 300px;
+	padding: 0;
+}
