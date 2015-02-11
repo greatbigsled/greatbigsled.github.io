@@ -1,12 +1,16 @@
 /**********/
 /* GLOBAL */
 /**********/
+
 html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 	background: #000;
+	background-image: url(images/bgrnd.jpg);
+	background-position: center;
+	background-attachment: fixed;
 }
 
 a{
@@ -14,14 +18,24 @@ a{
 	color: #AFEDD6;
 }
 
+
+#back{
+	background: rgba(0, 0, 0, 0.5);
+	width: 900px;
+	margin: auto;
+
+}
+
+
 /**********/
 /* HEADER */
 /**********/
+
 #header{
 	width: 800px;
 	padding: 10px;
 	margin: auto;
-	background: #fff;
+	/*background: #fff;*/
 	text-align: center;
 }
 
@@ -31,7 +45,7 @@ h1 {
 	font-variant: small-caps;
 	font-weight: bold;
 	color: #FC2A00;
-	margin: 0px auto 0px; 
+	margin: 0px auto 0px;
 }
 #stone{
 	color:#3A4F47;
@@ -45,11 +59,23 @@ ul {
 
 li {
 	display: inline;
-	padding: 5px;
-	font-family: "Friz Quadrata", Georgia, 'Times New Roman', Times, serif;
-	font-size: 200%;
+	padding: 0;
+	font-family: sans-serif;
 	font-variant: small-caps;
+	font-weight: bold;
 }
+
+a.button {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: #FC2A00; /* фон кнопки */
+  padding: .4em 1em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+
+} 
+a.button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+a.button:active { background: rgb(152,15,0); } /* при нажатии */
 
 
 /************/
@@ -59,19 +85,21 @@ li {
 #citate{
 	font-family: "Friz Quadrata", Georgia, 'Times New Roman', Times, serif;
 	font-size: 300%;
-	background: #fff;
-
+	/*background: rgba(0, 0, 0, 0.5);*/
 
 }
 #citate p{
 	margin:20px;
+	padding-top: 10px;
+	color: #fff;
 }
 
 /**********/
 /* IMAGES */
 /**********/
+
 #heroes{
-	background: #fff;
+	/*background: rgba(0, 0, 0, 0.5);*/
 	width: 800px;
 	margin: auto; 
 	
@@ -85,3 +113,4 @@ img {
 	height: 300px;
 	padding: 0;
 }
+
