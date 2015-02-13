@@ -1,0 +1,72 @@
+body {
+	background: #f9e933;
+	font-size: 100%;
+	font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Ubuntu, sans-serif;
+}
+h1 {
+	font-size: 300%; 
+}
+h2 {
+	font-size: 200%;
+}
+h3 {
+	font-size: 150%;
+}
+h5 {
+	font-size: 120%;
+}
+
+header, main, footer {
+	min-width: 855px;
+}
+
+header .container, main .container, footer .container{
+	max-width: 855px;
+	margin: auto;
+}
+
+header {
+	background: white;
+	overflow: auto;
+}
+
+header h1 {
+	float: left;
+	width: 570px;
+}
+
+header nav {
+	float: right;
+	width: 285px;
+}
+
+main {
+	background: white;
+	overflow: auto;
+}
+
+main #content {
+	float: left;
+	width: 570px;
+}
+
+main img {
+	float: right;
+	width: 285px;
+}
+
+
+
+div .contact {
+	float: left;
+	width: 570px;
+}
+
+div .sitemap {
+	float: right;
+	width: 285px;
+}
