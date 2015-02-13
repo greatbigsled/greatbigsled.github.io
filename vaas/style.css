@@ -1,0 +1,154 @@
+/*Что не вошло в классы*/
+*{
+	panding:0; margin=:0;	/*убирает отступы сверху и снизу*/
+}
+img{
+	border:none;   /*Убирает рамки у ссылок-картинок*/
+}
+body{
+	background:#dedbd6; font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#969696; line-height:1.3; background-attachment:fixed; background-image:url(img/fon2.jpg);)
+}
+h1, h2, h3, h4, h5, h6{
+	color:#2e2c2d; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/*Сайт*/
+.karkas{
+	max-width:1280px; min-width:960px; margin:0 auto;     /* Максимальную и минимальную ширину экрана*/
+}
+
+/*Шапка*/
+.head{
+	overflow:hidden; padding:30px 30px 80px 30px;
+}
+	.head p{
+		background-color:#EEF327; border-radius:50px; padding: 15px 15px 15px 15px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	}
+	
+	/*Шрифт для шапки*/	
+	.hdr {
+		float:left;
+		font-family: Verdana;
+		font-size: 3em;
+		font-weight: bold;
+		color: #FFFFFF;
+		letter-spacing: -0.11em;
+ 
+		text-shadow: -0.05em 0px 0.07em #000000;
+		
+	}
+ 
+	.hdr div {
+		display: inline-block;
+		color: #F00000;
+		}
+	.head p{
+		float:right; color: #F00000;
+	}
+
+/*Основной контент*/	
+.content-wrapper{
+	background:#fff;  padding: 10px 10px 10px 10px; margin:0px 40px 0px 40px; border-radius:5px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/*Описание*/
+.description{
+	overflow:hidden; padding: 30px 30px 30px 30px;
+}
+	.description img{
+		float:left; border-radius: 25px; width:50%; margin-right:30px; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.description p{
+		 font:Tahoma, Geneva, sans-serif; font-size:20px;
+	}
+
+/*Причины покупки парника*/
+.block_causes{
+	overflow:hidden; margin-bottom:30px;
+}
+
+/* Заголовок*/
+	.titl{
+		font: 32px Georgia, "Times New Roman";  
+ 		position: relative; /* обязательно */  
+  		color:#0C0;  
+  		margin: 10px 0;  
+  		padding: 0;
+		text-align:center;
+		
+		
+	}
+	.titl b{
+		position: absolute;  
+  		top: 0;  
+  		left: 0;  
+  		width: 100%;  
+  		height: 23px;  
+  		background: #FFF;  
+  		overflow: hidden /* для проклятого IE6 */;  
+  		opacity: 0.63;  
+  		filter: alpha(opacity=63);  
+  		-moz-opacity: 0.63;
+	}
+	
+	.causes{
+		float:left; width:25%; text-align:center;
+	}
+	
+/*Качество*/
+	.quality{
+	}
+		.block_quality{
+			overflow:hidden; padding: 30px 30px 30px 30px;
+		}
+		.block_quality img{
+			float:left; margin-right:20px; 
+		}
+		.block_quality p{
+			margin-top:60px;					
+		}
+	
+
+/*Плюсы*/
+
+.block{
+	overflow:hidden; margin-top: 40px;
+}
+	.block_1{
+		float:left; width:23%; text-align:center; margin-right:2%; margin-bottom:30px;
+	}
+		.block_1 img{
+			margin-bottom:20px;
+		}
+		.block_1 h2{
+		}
+		.block_1 p{
+		}
+		.fon{
+			background-color:#EEF327; border-radius:20px; padding: 10px 10px 10px 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+	
+/*отзывы*/
+.recall{
+	overflow:hidden;
+}
+	.block_recall{
+		float:left; width:50%; overflow:hidden;
+	}
+		.block_recall img{
+			float:left; width:150px; height:150px; border-radius:50%; margin:30px 25px 30px 25px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+		.block_recall h3{
+		}
+		.block_recall p{
+			
+		}
+
+.pic{
+	
+}
+	.pic img{
+	}
+
+/*Фотогалерея*/
+	
