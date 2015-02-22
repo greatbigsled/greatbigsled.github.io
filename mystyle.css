@@ -5,6 +5,14 @@ html, body{
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
+
+h1{
+	font-size: 300%;
+	font-weight: bold;
+}
+
+
+
 #wrapper{
 	min-height: 100%;
 	position: relative;
@@ -14,15 +22,38 @@ header{
 	text-align: center;
 	color: #fff;
 }
+/**************/
+/*    LINKS   */
+/**************/
+a:link {/* :link -  unvisited links*/
+	/*font-weight: bold;*/
+	text-decoration: none;
+}
+a:hover {
+	background: #f3f2e8;
+}
+nav ul li a {
+	text-align: center;
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #f3f2e8;
+	color: #42a2ce;
+	text-decoration: none;
+}
 
 #content{
+	position: relative;
 	padding: 10px;
 	padding-bottom: 80px;
 	background-color: #fff;
 	width: 800px;
+	min-height: 100%;
 	margin: auto;
 }
 
+/************/
+/*  FOOTER  */
+/************/
 footer{
 	text-align: center;
 	width: 100%;
