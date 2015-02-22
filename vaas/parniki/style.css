@@ -1,0 +1,410 @@
+/*Что не вошло в классы*/
+*{
+	panding:0; margin=:0;	/*убирает отступы сверху и снизу*/
+}
+img{
+	border:none;   /*Убирает рамки у ссылок-картинок*/
+}
+body{
+	background:#dedbd6; font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#969696; line-height:1.3; background-attachment:fixed; background-image:url(img/fon2.jpg);)
+}
+h1, h2, h3, h4, h5, h6{
+	color:#2e2c2d; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/*Сайт*/
+.karkas{
+	max-width:1280px; min-width:960px; margin:0 auto;     /* Максимальную и минимальную ширину экрана*/
+}
+
+/*Шапка*/
+.head{
+	overflow:hidden; padding:30px 30px 80px 30px;
+}
+	.head p{
+		background-color:#EEF327; border-radius:50px; padding: 15px 15px 15px 15px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	}
+	
+	/*Шрифт для шапки*/	
+	.hdr {
+		float:left;
+		font-family: Verdana;
+		font-size: 3em;
+		font-weight: bold;
+		color: #FFFFFF;
+		letter-spacing: -0.11em;
+ 
+		text-shadow: -0.05em 0px 0.07em #000000;
+		
+	}
+ 
+	.hdr div {
+		display: inline-block;
+		color: #F00000;
+		}
+	.head p{
+		float:right; color: #F00000;
+	}
+
+/*Основной контент*/	
+.content-wrapper{
+	background:#fff;  padding: 10px 10px 10px 10px; margin:0px 40px 0px 40px; border-radius:5px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/*Описание*/
+.description{
+	overflow:hidden; padding: 30px 30px 30px 30px;
+}
+	.description img{
+		float:left; border-radius: 25px; width:50%; margin-right:30px; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.description p{
+		 font:Tahoma, Geneva, sans-serif; font-size:20px;
+	}
+
+/*Причины покупки парника*/
+.block_causes{
+	overflow:hidden; margin-bottom:30px;
+}
+
+/* Заголовок*/
+	.titl{
+		font: 32px Georgia, "Times New Roman";  
+ 		position: relative; /* обязательно */  
+  		color:#0C0;  
+  		margin: 10px 0;  
+  		padding: 0;
+		text-align:center;
+		
+		
+	}
+	.titl b{
+		position: absolute;  
+  		top: 0;  
+  		left: 0;  
+  		width: 100%;  
+  		height: 23px;  
+  		background: #FFF;  
+  		overflow: hidden /* для проклятого IE6 */;  
+  		opacity: 0.63;  
+  		filter: alpha(opacity=63);  
+  		-moz-opacity: 0.63;
+	}
+	
+	.causes{
+		float:left; width:25%; text-align:center;
+	}
+	
+/*Качество*/
+	.quality{
+	}
+		.block_quality{
+			overflow:hidden; padding: 30px 30px 30px 30px;
+		}
+		.block_quality img{
+			float:left; margin-right:20px; 
+		}
+		.block_quality p{
+			margin-top:60px;					
+		}
+	
+
+/*Плюсы*/
+
+.block{
+	overflow:hidden; margin-top: 40px;
+}
+	.block_1{
+		float:left; width:23%; text-align:center; margin-right:2%; margin-bottom:30px;
+	}
+		.block_1 img{
+			margin-bottom:20px;
+		}
+		.block_1 h2{
+		}
+		.block_1 p{
+		}
+		.fon{
+			background-color:#EEF327; border-radius:20px; padding: 10px 10px 10px 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+	
+/*отзывы*/
+.recall{
+	overflow:hidden;
+}
+	.block_recall{
+		float:left; width:50%; overflow:hidden;
+	}
+		.block_recall img{
+			float:left; width:150px; height:150px; border-radius:50%; margin:30px 25px 30px 25px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
+		}
+		.block_recall h3{
+		}
+		.block_recall p{
+			
+		}
+
+.pic{
+	
+}
+	.pic img{
+	}
+
+/*Фотогалерея*/
+	
+	
+	
+/*Форма заказа*/
+
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+body { 
+  font-family: 'Oxygen', Arial, Helvetica, sans-serif; 
+  font-size: 62.5%; 
+  line-height: 1; 
+  padding-bottom: 85px;
+  background: #f5f7f7 url('img/bg.png');
+}*/
+
+::selection { background: #d2bef5; }
+::-moz-selection { background: #d2bef5; }
+::-webkit-selection { background: #d2bef5; }
+
+br { display: block; line-height: 2.2em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 {
+  font-family: 'Skranji', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 3.75em;
+  line-height: 1.7em;
+  margin-bottom: 7px;
+  color: #5b5463;
+  text-shadow: 0 2px white, 1px 3px #666; 
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+
+
+
+/* positioning */
+#w { 
+  display: block;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 35px 15px;
+  background: #fff;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 2px 3px 4px -2px rgba(0,0,0,0.55);
+  -moz-box-shadow: 2px 3px 4px -2px rgba(0,0,0,0.55);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5)
+}
+
+
+
+/* form styles */
+form .row { 
+  display: block;
+  padding: 7px 8px;
+  margin-bottom: 7px;
+}
+form .row:hover {
+  background: #f1f7fa;
+}
+
+form label {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 120px;
+  padding: 6px 0;
+  color: #464646;
+  vertical-align: top;
+}
+form .req { color: #ca5354; }
+
+form .note { 
+  font-size: 1.2em;
+  line-height: 1.33em;
+  font-weight: normal;
+  padding: 2px 7px;
+  margin-bottom: 10px;
+}
+
+form input:focus, form textarea:focus { outline: none; }
+
+/* placeholder styles: http://stackoverflow.com/a/2610741/477958 */
+::-webkit-input-placeholder { color: #aaafbd; font-style: italic; } /* WebKit */
+:-moz-placeholder { color: #aaafbd; font-style: italic; }           /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder { color: #aaafbd; font-style: italic; }          /* Mozilla Firefox 19+ */ 
+:-ms-input-placeholder { color: #aaafbd; font-style: italic; }      /* Internet Explorer 10+ */
+
+form .txt {
+  display: inline-block;
+  padding: 8px 9px;
+  padding-right: 30px;
+  width: 240px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.35em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-image: url('img/checkmark.png');
+  background-position: 110% center;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(25, 25, 25, 0.25) inset, -1px 1px #fff;
+  -moz-box-shadow: 0 1px 2px rgba(25, 25, 25, 0.25) inset, -1px 1px #fff;
+  box-shadow: 0 1px 2px rgba(25, 25, 25, 0.25) inset, -1px 1px #fff;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+form .txtarea {
+  display: inline-block;
+  padding: 8px 11px;
+  padding-right: 30px;
+  width: 320px;
+  height: 120px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.35em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-image: url('img/checkmark.png');
+  background-position: 110% 4%;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset;
+  -moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset;
+  box-shadow: 0 1px 4px -1px #a8a8a8 inset;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+form .txt:focus, form .txtarea:focus {
+  width: 300px;
+  color: #545454;
+  background-color: #fff;
+  background-position: 110% center;
+  background-repeat: no-repeat;
+  border-color: #059;
+  -webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+  -moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7); 
+  box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7); 
+}
+form .txtarea:focus { 
+  width: 375px; 
+  background-position: 110% 4%;
+}
+
+form .txt:valid {
+  background-color: #deecda;
+  background-position: 98% center;
+  background-repeat: no-repeat;
+  color: #7d996e;
+  border: 1px solid #95bc7d;
+}
+form .txtarea:valid {
+  background-color: #deecda;
+  background-position: 98% 4%;
+  background-repeat: no-repeat;
+  color: #7d996e;
+  border: 1px solid #95bc7d;
+}
+form .txt:focus:valid, form .txtarea:focus:valid {
+  -webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+  -moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7); 
+  box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);  
+}
+
+form .center {
+  margin-top: 25px;
+  text-align: center;
+ 
+}
+
+#submitbtn {
+  height: 70px;
+  width: 275px;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Oxygen', Arial, sans-serif;
+  font-size: 2.0em;
+  color: #0a528f;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.65); 
+  border-width: 1px;
+  border-style: solid;
+  border-color: #317bd6 #3784e3 #2d74d5 #3774e3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #4581e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6faefd), to(#4581e5));
+  background-image: -webkit-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -moz-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -ms-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -o-linear-gradient(top, #6faefd, #4581e5);
+  background-image: linear-gradient(top, #6faefd, #4581e5);
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear; 
+}
+#submitbtn:hover, #submitbtn:focus {
+  -webkit-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+  -moz-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+}
+
+#submitbtn:active {
+  -webkit-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+  -moz-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+}
+
