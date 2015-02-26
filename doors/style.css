@@ -1,0 +1,445 @@
+.wrapper{
+	width: 1000px;
+	margin: auto;
+}
+
+a{
+	display: inline-block;
+	background: #ff9900;
+	padding: 8px;
+	border-radius: 4px;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+.lil-head{
+	background: #292828;
+	text-align: center;
+	color: #ff9900;
+	font-size: 1.6em;
+	padding: 15px;
+}
+/**************/
+/******HEADER */
+/**************/
+.toptop{
+	background: black url("imgs/bgd-toptop.png") repeat-x 0 0;
+	color: white;
+	height: 200px;
+}
+h1{
+	clear: both;
+	font-size: 3em;
+	color: #ff9900; 
+	text-align: center;
+	font-weight: bold;
+}
+h1 span{
+	font-size: 80%;
+	font-weight: normal;
+}
+/*************************************************************************/
+.logo{
+	float: left;
+	padding: 35px 0 0 25px;
+	font-size: 0.6em;
+	width: 250px;
+}
+.logo .fabrica{
+	font-size: 2em;
+}
+.logo div{
+	margin-left: 6px;
+}
+.logo div, .logo img{
+	display: inline-block;
+	vertical-align: top;
+}
+/*************************************************************************/
+.call-us{
+	float: right;
+	padding: 35px 25px 0 0;
+}
+
+.call-us span{
+	font-size: 26px;
+	vertical-align: middle;
+}
+.call-us a{
+	margin-left: 40px;
+}
+/*************************************************************************/
+.doorline{
+	height: 500px;
+	background: white url("imgs/doors-line.jpg") repeat-x -150px 0;
+}
+.headoors{
+	display: inline-block;
+}
+.headoors .through{
+	text-decoration: line-through;
+	font-size: 1.2em;
+}
+.headoors span{
+	font-size: 1.6em;
+	font-weight: bold;
+}
+.headoors div{
+	margin-top: 380px;
+	margin-left: 40px;
+}
+.headoors:nth-child(1){
+	background: url("imgs/door-standart-head.png") no-repeat;
+	height: 420px;
+	width: 180px;
+	margin-left: 165px;
+	margin-top: 24px;
+}
+.headoors:nth-child(2){
+	background: url("imgs/door-premium-head.png") no-repeat;
+	height: 420px;
+	width: 180px;
+	margin-left: 55px;
+	margin-top: 24px;
+}
+.headoors:nth-child(3){
+	background: url("imgs/door-granite-head.png") no-repeat;
+	height: 420px;
+	width: 180px;
+	margin-left: 55px;
+	margin-top: 24px;
+}
+/***************************************************************************/
+.features{
+	background: #292828 url("imgs/features-bgd.jpg") repeat-x 0 -5px;
+	color: white;
+	height: 180px;
+}
+.features>.wrapper>div{
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 90px;
+	font-size: 0.8em;
+	text-align: center;
+}
+.circle{
+	height: 126px;
+	width: 126px;
+	background: white;
+	border-radius: 63px
+}
+.circle img{
+	margin-left: 10px;
+	margin-top: 15px;
+}
+/******************/
+/******MEASURE ****/
+/******************/
+.door-measure{
+	height: 480px;
+	background: white url("imgs/measure-bgd.jpg") no-repeat 660px 100px;
+}
+.door-measure>.wrapper>span{
+	padding-top: 40px;
+	display: block;
+	text-align: center;
+	font-size: 1.6em;
+	color: #cb7b03;
+	font-weight: bold;
+}
+.measure-input{
+	/*height: 260px;*/
+	/*width: 280px;*/
+	margin-top: 60px;
+	margin-left: 40px;
+}
+.measure-input>span{
+	width: 400px;
+	margin-left: -60px;
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+.request{
+	background: #e5e5e5;
+	width: 280px;
+	height: 220px;
+	border-radius: 10px;
+
+}
+.request span{
+	display: block;
+	background: #d9d9d9;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1em;
+	padding: 20px;
+	border-radius: 10px 10px 0 0;
+}
+.for-form{
+	font-weight: bold;
+	padding: 5px;
+	background: #f2bf72;
+	width: 220px;
+	vertical-align: middle;
+	margin-left: 30px;
+	text-align: left;
+	margin-top: 15px;
+}
+.for-form input{
+	background: #f2bf72;
+	width: 160px;
+	margin-left: 10px;
+	height: 1.6em;
+	margin-top: 0px;
+}
+input{
+	width: 230px;
+	background: #ff9900;
+	font-weight: bold;
+	font-size: 0.8em;
+	font-family: "PF DinDisplay Pro";
+	text-transform: uppercase;
+	border: none;
+	margin-left: 30px;
+	margin-top: 10px;
+	border-radius: 5px;
+
+}
+
+/*<!-- ********************* -->*/
+/*<!-- ОПИСАНИЕ ДВЕРЕЙ ******-->*/
+/*<!-- ********************* -->*/
+
+.door-type{
+	padding-top: 40px;
+	margin-left: 30px;
+	height: 750px;
+}
+.graybgd{
+	background: #ededed;
+}
+.name-in-descr{
+	font-size: 3em;
+	font-weight: bold;
+}
+.black{
+	font-weight: bold;
+}
+.gray{
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #7b7b7a;
+}
+.door-type p{
+	margin: 25px 0;
+	line-height: 1.4;
+}
+.door-type>img{
+	display: block;
+	float: left;
+	margin-right: 120px;
+}
+.descr-buttons{
+	text-align: center;
+	margin-bottom: 50px;
+}
+/* <!-- ************************************ --> */
+/*<!-- ****** ПРЕИМУЩЕСТВА **************** -->*/
+/*<!-- ************************************ -->*/
+.video{
+	text-align: center;
+	padding: 50px 0 20px 0;
+}
+.advantages{
+	text-align: center;
+}
+.advantages a{
+	margin: 40px 0;
+	padding: 20px 50px;
+}
+/***********************************************/
+/************ТАБЛИЦА****************************/
+/***********************************************/
+.table-head-head{
+	display: block;
+	margin: 20px 0;
+	text-align: center;
+	font-weight: bold;
+}
+.table-head{
+	display: block;
+	margin-top: 50px;
+	/*vertical-align: middle;*/
+}
+th:nth-child(2) .table-head{
+	margin-top: -50px;
+}
+th:first-child img{
+	float:left; 
+}
+th:nth-child(3) img{
+	float:right; 
+}
+table{
+	height: 1600px;
+}
+th{
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 1.4em;
+	color: #cb7b03;
+}
+td:nth-child(2){
+	font-weight: bold;
+	text-align: center;
+	padding: 0 15px;
+}
+td:nth-child(1){
+	text-align: right;
+}
+.door-why .wrapper>div{
+	text-align: center;
+}
+.door-why a{
+	margin: 40px 0;
+	padding: 20px 50px;
+}
+/*<!-- ************************************************** -->*/
+/*<!-- ********** ТЕСТ ДВЕРИ **************************** -->*/
+/*<!-- ************************************************** -->*/
+.door-test{
+	text-align: center;
+}
+.door-test .wrapper>a{
+	margin: 40px 0;
+	padding: 20px 50px;
+}
+.door-test .wrapper>span{
+	display: block;
+	margin: 20px 0;
+}
+.broken{
+	display: block;
+	width: 380px;
+	height: 700px;
+	background: #ff9900;
+	text-align: center;
+	font-weight: bold;
+}
+.broken span{
+	display: block;
+	margin: 5px 0;
+}
+.broken div{
+	background: #ffad33;
+	padding: 30px 0px;
+	margin: 0 28px;
+	width: 324px;
+	height: 640px;
+}
+.broken1{
+	float: left;
+	margin-left: 80px;
+
+}
+.broken2{
+	float: right;
+	margin-right: 80px;
+}
+/*<!-- ********************************************* -->*/
+/*<!-- ************ КАК МЫ РАБОТАЕМ **************** -->*/
+/*<!-- ********************************************* -->*/
+.door-how{
+	height: 410px;
+	text-align: center;
+}
+.number{
+	/*font-weight: bold;*/
+	font-size: 3.6em;
+}
+.door-how span{
+	display: block;
+}
+.door-how .wrapper div{
+	display: inline-block;
+	width: 150px;
+	font-size: 0.8em;
+	margin-right: 10px; 
+	margin-top: 40px;
+	vertical-align: top;
+
+}
+.door-how a{
+	margin: 0px 0;
+	padding: 20px 50px;
+}
+
+/*************************************************************/
+/*************     ПРЕИМУЩЕСТВА ДВЕРЕЙ    ********************/
+/*************************************************************/
+.door-advantages{
+	background: gray url("imgs/bgd-adv.jpg");
+	height: 630px;
+	text-align: center;
+}
+.door-advantages .wrapper div{
+	margin-top: 15px;
+}
+.adv-row{
+	display: inline-block;
+	width: 220px;
+	vertical-align: top;
+	margin-right: 20px;
+
+}
+.adv-row span{
+	display: block;
+}
+
+/*<!-- ********************* -->*/
+/*<!-- О НАШЕЙ ФАБРИКЕ ******-->*/
+/*<!-- ********************* -->*/
+.door-about{
+	text-align: center;
+}
+.door-about img{
+	margin: 10px;
+}
+.door-about a{
+	margin: 20px 0;
+	padding: 20px 50px;
+
+}
+.door-about p{
+	margin: 10px;
+}
+
+
+/*<!-- ************************ -->*/
+/*<!-- ВЫПОЛНЕННЫЕ РАБОТЫ ******-->*/
+/*<!-- ************************ -->*/
+.door-works{
+	text-align: center;
+}
+.door-works img{
+	display: inline-block;
+	margin: 30px 20px; 
+}
+
+/***************************************/
+/******* FOOOOTER **********************/
+/***************************************/
+.bottom1{
+	background: black url("imgs/bgd-toptop.png");
+	padding: 20px 0;
+}
+.bottom2{
+	background: black url("imgs/bgd-toptop.png");
+	height: 120px;
+	color: white;
+}
+.bottom2 .call-us a{
+	margin-left: 40px;
+}
