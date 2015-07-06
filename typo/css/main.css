@@ -1,0 +1,30 @@
+/*color*/
+header{
+	background-color: red;
+}
+main{
+	background-color: lime;
+
+}
+
+.aside{
+	background-color: navy;
+	width: 300px;
+	float: right;
+}
+
+.content{
+	float: left;
+	width: 600px;
+	background: rgba(155, 155, 155, .6);
+	padding: 20px;
+	margin: 0 auto;
+}
+
+body{
+	padding: 0px 30px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+HEADER
