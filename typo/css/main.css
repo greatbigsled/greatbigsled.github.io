@@ -8,7 +8,7 @@ main{
 }
 
 .aside{
-	background-color: navy;
+	background: #eee;
 	width: 300px;
 	float: right;
 }
@@ -27,4 +27,78 @@ body{
 	margin: 0 auto;
 }
 
-HEADER
+/* HEADER */
+
+
+/************************/
+/* NAVIGATION           */
+/************************/
+
+nav{
+  float: none; 
+  clear: both;
+  /*width: 30%; */
+  /*margin: 10% auto;*/
+  background: #eee;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li{
+	float: none; 
+  	width: 100%;
+}
+
+nav li a{
+  display: block; 
+  width: 100%; 
+  padding: 20px; 
+  border-left: 5px solid; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: #444;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+
+nav li a:hover{ border-bottom: 0px; color: #fff;}
+nav li:first-child a{ border-left: 10px solid #3498db; }
+nav li:nth-child(2) a{ border-left: 10px solid #ffd071; }
+nav li:nth-child(3) a{ border-left: 10px solid #f0776c; }
+nav li:nth-child(4) a{ border-left: 10px solid #FE4365; }
+nav li:nth-child(5) a{ border-left: 10px solid #83AF9B; }
+nav li:nth-child(6) a{ border-left: 10px solid #69D2E7; }
+nav li:nth-child(7) a{ border-left: 10px solid #FA6900; }
+nav li:nth-child(8) a{ border-left: 10px solid #C02942; }
+nav li:nth-child(9) a{ border-left: 10px solid #53777A; }
+nav li:last-child a{ border-left: 10px solid #1abc9c; }
+
+nav li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+  z-index: -1;
+}
+
+nav li a:hover:after{ width: 100%; }
+nav li:first-child a:after{ background: #3498db; }
+nav li:nth-child(2) a:after{ background: #ffd071; }
+nav li:nth-child(3) a:after{ background: #f0776c; }
+nav li:nth-child(4) a:after{ background: #FE4365; }
+nav li:nth-child(5) a:after{ background: #83AF9B; }
+nav li:nth-child(6) a:after{ background: #69D2E7; }
+nav li:nth-child(7) a:after{ background: #FA6900; }
+nav li:nth-child(8) a:after{ background: #C02942; }
+nav li:nth-child(9) a:after{ background: #53777A; }
+nav li:last-child a:after{ background: #1abc9c; }
