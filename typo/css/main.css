@@ -1,7 +1,8 @@
 /*color*/
-header{
-	background-color: red;
+body{
+	font-family: 'Open Sans', sans-serif;
 }
+
 main{
 	background-color: lime;
 
@@ -21,13 +22,65 @@ main{
 	margin: 0 auto;
 }
 
-body{
+.wrapper{
 	padding: 0px 30px;
 	width: 960px;
 	margin: 0 auto;
 }
 
+
+
+
+
+/************************/
 /* HEADER */
+/************************/
+header{
+	background-color: black;
+	color: white;
+	height: 100px;
+	padding-top: 20px;
+}
+
+.header-wrapper{
+	clear: both;
+	padding: 0px 30px;
+	width: 960px;
+	margin: 0 auto;
+
+}
+
+h1{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 32pt;
+}
+.logo p{
+	margin: 0;
+	font-variant: small-caps;
+}
+.call-us{
+	text-align: right;
+	/*font-variant: small-caps;*/
+	font-size: 12pt;
+}
+
+header .logo{
+	float: left;
+	margin-left: 20px;
+	/*margin-top: 20px;*/
+}
+
+header .call-us{
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+
+
+
 
 
 /************************/
@@ -102,3 +155,21 @@ nav li:nth-child(7) a:after{ background: #FA6900; }
 nav li:nth-child(8) a:after{ background: #C02942; }
 nav li:nth-child(9) a:after{ background: #53777A; }
 nav li:last-child a:after{ background: #1abc9c; }
+
+/************************/
+/*     FOOOTER          */
+/************************/
+footer{
+	clear: both;
+	background: black;
+	color: white;
+	height: 100px;
+}
+.adress-office{
+	/*float: left;*/
+	display: inline-block;
+	/*width: 200px;*/
+}
+.adress-manufactory{
+	display: inline-block;
+}
