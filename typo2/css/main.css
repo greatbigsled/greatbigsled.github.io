@@ -1,0 +1,60 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.section.header{
+	padding-top: 20px;
+	padding-bottom: 50px;
+	min-height: 200px;
+}
+.header span{
+	font-size: 1.4em;
+}
+
+.header h1{
+	margin-bottom: 0;
+	font-size: 5em;
+	font-weight: bolder;
+}
+.header .section-description{
+	margin-bottom: 0;
+	font-size: 1.4em;
+}
+
+h4{
+	font-size: 1.4em;
+}
+
+
+.section{
+	text-align: center;
+	min-height: 300px;
+	padding-top: 80px;
+	vertical-align: middle;
+}
+
+
+
+.bso, .organization-form, .journals, .folders, .archive-box{
+  background-image: url('../images/values-bg.jpg');
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  /*background: gray;*/
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+
+
+
+.section-header{
+	font-weight: bold;
+}
+.section-description{
+	font-size: 1.4em;
+}
+
+.footer{
+	font-size: 1.4em;
+	min-height: 200px;
+	/*margin-bottom: 20px;*/
+}
