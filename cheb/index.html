@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Your page title here :)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/custom.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+	<style media="screen">
+		#slider {
+	    	max-width: 800px;
+	    	margin: 20px auto;
+		}
+</style>
 
 </head>
 <body>
@@ -73,6 +80,7 @@
 
 
 	</div> <!-- wrapper end -->
+	
 
 	
   <!-- Слайдер с изображениями
@@ -85,6 +93,13 @@
 		</div>
 	</div>
 
+	<script src="ideal-image-slider.js"></script>
+	
+	<script>
+		var slider = new IdealImageSlider.Slider('#slider');
+    	slider.start();
+	</script>
+
 
 
   <!-- Маленькие новости
@@ -95,7 +110,7 @@
 
 	<div class="recent-news">
 		<div class="small-news">
-			<h4 class="sm-header">Время плоский круг</h4>
+			<h4 class="sm-header">How to find</h4>
 			<p class="sn-description">
 				Lorem ipsum lorem some shit here. Not that long few more will be enough.
 			</p>
@@ -103,7 +118,7 @@
 
 
 		<div class="small-news">
-			<h4 class="sm-header">Вселенная умирает</h4>
+			<h4 class="sm-header">Ubuntu hacks</h4>
 			<p class="sn-description">
 				Lorem ipsum lorem some shit here. Not that long few more will be enough.
 			</p>
@@ -111,7 +126,7 @@
 
 
 		<div class="small-news">
-			<h4 class="sm-header">Новости-хуевости</h4>
+			<h4 class="sm-header">Shiny metal ass</h4>
 			<p class="sn-description">
 				Lorem ipsum lorem some shit here. Not that long few more will be enough.
 			</p>
@@ -119,7 +134,7 @@
 
 
 		<div class="small-news">
-			<h4 class="sm-header">Остановите землю я сойду</h4>
+			<h4 class="sm-header">Don't stop me</h4>
 			<p class="sn-description">
 				Lorem ipsum lorem some shit here. Not that long few more will be enough.
 			</p>
