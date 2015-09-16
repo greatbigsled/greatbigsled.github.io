@@ -20,7 +20,6 @@
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/custom.css">
 
 	<!-- Favicon
@@ -87,13 +86,11 @@
   ************************************************************ -->
 	<div class="img-slider">
 		<div id="slider">
-			<img data-src="slides/1.jpg" data-src-2x="img/1@2x.jpg" alt="Slide 1" />
-			<img data-src="slides/2.jpg" data-src-2x="img/2@2x.jpg" src="" alt="Slide 2" />
-			<img data-src="slides/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Slide 3" />
+			<img src="slides/1.jpg"  alt="Slide 1" />
+			<img data-src="slides/2.jpg" src="slides/2.jpg" alt="Slide 2" />
+			<img data-src="slides/3.jpg" src="slides/3.jpg" alt="Slide 3" />
 		</div>
 	</div>
-
-	<script src="ideal-image-slider.js"></script>
 	
 	<script>
 		var slider = new IdealImageSlider.Slider('#slider');
@@ -276,5 +273,8 @@
 	</div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<script src="../ideal-image-slider.js"></script>
+
 </body>
 </html>

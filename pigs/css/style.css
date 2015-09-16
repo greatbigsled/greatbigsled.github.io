@@ -1,0 +1,524 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  /*font-family: "Roboto", sans-serif;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: Arial, "Roboto", sans-serif;
+  color: #3d3536;
+  background-color: white;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+a {
+  color: #b4d7a8;
+  text-decoration: none;
+}
+.button{
+  text-align: center;
+  /*vertical-align: middle;*/
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00bc00+0,00bc00+50,007700+99 */
+  background: #00bc00; /* Old browsers */
+  background: -moz-linear-gradient(top,  #00bc00 0%, #00bc00 50%, #007700 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00bc00), color-stop(50%,#00bc00), color-stop(99%,#007700)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #00bc00 0%,#00bc00 50%,#007700 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #00bc00 0%,#00bc00 50%,#007700 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #00bc00 0%,#00bc00 50%,#007700 99%); /* IE10+ */
+  background: linear-gradient(to bottom,  #00bc00 0%,#00bc00 50%,#007700 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bc00', endColorstr='#007700',GradientType=0 ); /* IE6-9 */
+}
+.button:hover{
+  background: linear-gradient(to bottom, rgba(0,188,0,.8) 0%,rgba(0,188,0,.8) 50%,rgba(0,119,0,.8) 99%);
+
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 4em 0;
+  z-index: 1;
+}
+
+.cd-bg-1 a{
+  position: absolute;
+  padding: 15px 100px;
+  left: 50%;
+  bottom: 20%;
+  -webkit-transform: translateX(-50%) translateY(20%);
+  -moz-transform: translateX(-50%) translateY(20%);
+  -ms-transform: translateX(-50%) translateY(20%);
+  -o-transform: translateX(-50%) translateY(20%);
+  transform: translateX(-50%) translateY(20%);
+}
+
+
+
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../img/bg-header.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("../img/bg-table.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("../img/bgd-call-us.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("../img/bgd-bottom.jpg");
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.cd-scrolling-bg h2{
+  font-size: 50px;
+  /*font-size: 1.875rem;*/
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+.cd-scrolling-bg {
+  text-align: center;
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color{
+  background-image: url("../img/bgd-texture.jpg");  
+}
+.cd-scrolling-bg.cd-color-top{
+  background-image: url("../img/bgd-top.jpg");
+}
+
+.cd-scrolling-bg.cd-color-happy {
+  background-image: url("../img/bgd-happy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    /*padding: 8em 0;*/
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+/* -------------------------------- 
+
+HEADER
+
+-------------------------------- */
+.herb{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 150px;
+}
+.cd-bg-1 h1{
+  text-align: center;
+  font-size: 65px;
+  /*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);*/
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top: 250px;
+
+}
+.cd-bg-1 h3{
+  text-align: center;
+  font-size: 30px;
+  /*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);*/
+  color: white;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+/* -------------------------------- 
+
+Advantages row
+
+-------------------------------- */
+.adv-row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.adv-row{
+  width: 90%;
+  max-width: 1170px;
+  margin: 4em auto;
+}
+.adv-row li{
+  width: 33.3333333333%;
+  float: left;
+  padding: 20px;
+  text-align: center;
+}
+.adv-row li span{
+  font-weight: 600;
+}
+.adv-row img{
+  display: block;
+  width: 200px;
+  margin: 1em auto;
+}
+
+/* -------------------------------- 
+
+Pighead
+
+-------------------------------- */
+.wrapp{
+  position: relative;
+  width: 90%;
+  max-width: 1170px;
+  margin: 4em auto;
+}
+.cd-bg-2 h2{
+  text-align: center;
+  font-size: 50px;
+  /*font-size: 1.875rem;*/
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+
+.wrapp:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.two-col{
+  width: 50%;
+  float: left;
+  padding: 20px;
+  /*border: 1px solid green;*/
+}
+.two-col:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.wrapp .two-col .pighead{
+  position: relative;
+}
+.wrapp .pighead img{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+.two-col table td{
+  padding: 6px;
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+/* -------------------------------- 
+
+Why us
+
+-------------------------------- */
+.why-us h2{
+  line-height: 1.4em;
+}
+.why-us h3{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.why-table{
+  font-size: 16px;
+  text-align: left;
+}
+.why-table td{
+  padding: 12px;
+}
+.why-table span{
+  font-weight: 600;
+}
+
+.why-table img{
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+/* -------------------------------- 
+
+CALL US
+
+-------------------------------- */
+.cd-bg-3 h2{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 3px black,
+               -2px -2px 3px black,
+               2px -2px 3px black,
+               -2px 2px 3px black;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+.form-wrapper form{
+  padding: 4%;
+  width: 500px;
+  border-radius: 10px;
+  margin: 4em auto;
+  background-color: rgba(0,0,0, 0.5);
+  color: white;
+  font-size: 20px;
+  
+}
+.form-wrapper form div{
+  text-align: center;
+  font-size: 26px;
+}
+input[type=text], input[type=tel]{
+  width: 100%;
+  height: 2em;
+  color: black;
+  font-size: 120%;
+  font-weight: bold;
+  margin: 10px auto;
+}
+input[type=submit]{
+  font-size: 24px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 2.5em;
+  color: white;
+  background-color: limegreen;
+  border-radius: .5em;
+  border: none;
+  margin: 10px auto;
+}
+
+
+/* -------------------------------- 
+
+HOW WE WORK
+
+-------------------------------- */
+.cd-color-top h2{
+  color: white;
+  text-shadow: 2px 2px 3px black,
+               -2px -2px 3px black,
+               2px -2px 3px black,
+               -2px 2px 3px black;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+.how-we-work:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.how-we-work{
+  width: 90%;
+  max-width: 1170px;
+  margin: 4em auto;
+}
+.how-we-work li{
+  width: 20%;
+  float: left;
+  padding: 10px;
+  text-shadow: 1px 1px 1px black,
+               -1px -1px 1px black,
+               1px -1px 1px black,
+               -1px 1px 1px black;
+  color: white;
+  text-align: center;
+}
+.how-we-work li:after{
+  content: "";
+  display: block;
+  background: url("../img/how-arrow.png") center center no-repeat ;
+  width: 50px;
+  margin-left: 50px;
+  /*float: left;*/
+}
+.how-we-work img{
+  display: block;
+  width: 140px;
+  margin: 1em auto;
+}
+/* -------------------------------- 
+
+What people say
+
+-------------------------------- */
+.people-say{
+  text-align: center;
+}
+.cd-bg-4 h2, .cd-bg-4 h3{
+  /*text-align: center;*/
+  font-size: 50px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+.cd-bg-4 h3{
+  /*font-family: */
+  margin: 20px;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px white,
+               -2px -2px 2px white,
+               2px -2px 2px white,
+               -2px 2px 2px white;
+}
+.people-say a{
+  padding: 15px 40px;
+  color: black;
+}
+.col-3-wrap{
+  font-size: 16px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1170px;
+  margin: 4em auto;
+}
+.col-3{
+  text-align: left;
+  margin: 10px;
+  width: 30.333333%;
+  float: left;
+  padding: 10px;
+  background: white;
+  border: 3px solid gray;
+  border-radius: 5px;
+}
+.col-3 p{
+  padding: 20px 10px;
+}
+.col-3 span{
+  font-weight: 600;
+}
+.more{
+  text-align: right;
+}
+.more a{
+  text-decoration: underline;
+  color: black;
+  display: block;
+  font-size: 20px;
+}
+
+/* -------------------------------- 
+
+Footer
+
+-------------------------------- */
+.cd-color-happy h2{
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.footer{
+  /*display: */
+  background: rgba(255, 255, 255, .4);
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  padding-left: 10%;
+  padding-right: 10%; 
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  bottom: 30%;
+
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  -webkit-transform: translateX(-50%) translateY(25%);
+  -moz-transform: translateX(-50%) translateY(25%);
+  -ms-transform: translateX(-50%) translateY(25%);
+  -o-transform: translateX(-50%) translateY(25%);
+  transform: translateX(-50%) translateY(25%);
+}
+.footer:hover{
+  background: rgba(255, 255, 255, .25)
+}
