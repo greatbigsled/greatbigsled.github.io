@@ -54,6 +54,9 @@ body {
 	background-color: #e84545;
 	border-radius: 3px;
 }
+.btn:hover {
+	background: #e52e2e;
+}
 .btn-large {
 	padding: 15px 40px;
 }
@@ -108,12 +111,16 @@ nav li {
 	display: inline-block;
 }
 nav a {
-	border: 1px solid red;
+	/*border: 1px solid ;*/
 	font-size: 16px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: white;
 	padding: 10px 15px;
+}
+nav a:hover {
+	color: white;
+	background: #e84545;
 }
 .splash {
 	/*text-transform: uppercase;*/
@@ -278,21 +285,106 @@ nav a {
 	/*font-weight: bold;*/
 	font-size: 28px;
 }
-.team .ico-fb:before {
+.ico-fb:before {
 	content: "\e05d";
 }
-.team .ico-tw:before {
+.ico-tw:before {
 	content: "\e05e";
 }
-.team .ico-gp:before {
+.ico-gp:before {
 	content: "\e05f";
 }
-.team .ico-tmbl:before {
+.ico-tmbl:before {
 	content: "\e061";
 }
-.team .ico-lnd:before {
+.ico-lnd:before {
 	content: "\e062";
 }
 /* ========================================= */
 /*  TESTIMONIALS  */
 /* ========================================= */
+.testimonials{
+	padding: 50px 0;
+}
+.testim {
+
+}
+.testim .col-1-2 {
+	height: 300px;
+}
+.testimonial-image{
+	background: url("../images/testimonial-1.jpg") no-repeat center;
+	min-height: 100%;
+}
+
+.testimonial-text {
+	background: #53354A;
+}
+.testimonial-text blockquote {
+	font-size: 35px;
+	font-style: italic;
+	padding: 0 20px;
+	color: white;
+	font-weight: 300;
+}
+.testimonial-text p{
+	margin-bottom: 0;
+
+}
+.testimonial-text cite {
+	font-size: 16px;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+/* ========================================= */
+/*  DOWNLOAD  */
+/* ========================================= */
+.download {
+	text-align: center;
+	padding-bottom: 50px;
+}
+.download h3 {
+	font-size: 30px;
+	font-weight: 300;
+}
+.download p {
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+/* ========================================= */
+/*  FOOTER  */
+ /*========================================= */
+footer {
+ 	background: #3A3E64;
+ 	text-align: center;
+ 	color: #9C9EB1;
+ 	font-weight: 300;
+}
+footer h5 {
+ 	color: white;
+ 	font-weight: 500;
+ 	letter-spacing: 1px;
+ 	font-size: 16px;
+	text-transform: uppercase;
+ }
+ footer a {
+ 	color: white;
+
+ }
+footer .share-btns a {
+ 	display: inline-block;
+ 	margin: 0 5px;
+ 	text-decoration: none;
+ 	font-size: 30px;
+}
+footer a:hover {
+ 	color: #e84545;
+}
+.footer-bottom {
+	background: #313454;
+}
+.footer-bottom {
+	padding: 10px 0;
+}
