@@ -1,9 +1,12 @@
 html, body{
-	font-size: 1.1em;
+	font-size: 1em;
+	height: 100%;
 }
 
-.wrapper{
-	margin-left: 200px;
+.container{
+	margin: 0 auto;
+	width: 95%;
+	max-width: 960px;
 }
 
 
@@ -29,7 +32,10 @@ header p{
 /*****************************************/
 /*      LINKS            */
 /*****************************************/
-
+main {
+	height: 100%;
+	margin-bottom: -5em;
+}
 .main-menu, .main-menu a{
 	color: #327CCB;
 	line-height: 140%;
@@ -44,4 +50,18 @@ header p{
 }
 .main-menu a:visited{
 	color: #a3b7cb;
+}
+
+/*****************************************/
+/*      FOOTER            */
+/*****************************************/
+footer {
+	position: relative;
+	height: 4em;
+	padding: 1em;
+
+
+	background-color: #000;
+	color: #aaa;
+	font-size: .8em;
 }
