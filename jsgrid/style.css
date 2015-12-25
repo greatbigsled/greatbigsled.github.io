@@ -1,0 +1,26 @@
+html {
+    font-family: sans-serif;
+}
+
+.gg-td {
+    display: inline-block;
+    width: 100px;
+    outline: 1px solid #e1e1e1;
+    text-align: center;
+    overflow: hidden;
+    height: 1em;
+}
+.gg-tr-head {
+    font-weight: 600;
+}
+.gg-tr {
+    display: inline-block;
+}
+
+#cont-two {
+    border: 50px solid red;
+}
+#cont-three {
+    border: 50px solid blue;
+
+}
