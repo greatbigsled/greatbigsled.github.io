@@ -106,6 +106,7 @@ main {
 }
 .main-section {
     margin: 20px 0;
+
 }
 .h1 {
     display: block;
@@ -177,6 +178,12 @@ main {
     outline: 1px solid;
 }
 /*--------------------------------------------------------*/
+
+/*        СЕКЦИЯ ВЫБОРА МАРКИ АВТОМОБИЛЯ                  */
+.car-model-select-section {
+    text-align: center;
+}
+
 .goods {
     margin-top: 10px;
 }
@@ -255,13 +262,26 @@ main {
     background: rgba(67, 87, 121, 0.6);
     cursor: pointer;
     z-index: 2;
-    display: none;
+    /*display: none;*/
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
 }
 .shadow-layer.is-visible {
-    display: block;
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
 }
 .overflow-hidden {
     overflow: hidden;
+}
+/*------------------------------------------
+    МОДАЛЬНЫЕ ОКНА
+-------------------------------------------*/
+.modal-container {
+    padding: 10px;
+    padding-top: 60px;
+    box-shadow: 0 1px 3px #ddd;
 }
 
 /*  САЙДБАР КОРЗИНЫ         */
@@ -271,7 +291,6 @@ main {
     position: fixed;
     width: 260px;
     top: 0;
-    padding-top: 50px;
     height: 100%;
 
     overflow-y: auto;
@@ -293,7 +312,6 @@ main {
     top: 0;
     height: 100%;
     width: 260px;
-    padding-top: 50px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -312,11 +330,10 @@ main {
 /*  САЙДБАР ПОИСКА   */
 .search-sidebar {
     position: fixed;
-    background-color: #444;
+    background-color: #fff;
     top: 0;
     width: 100%;
     /*padding: 5px;*/
-    padding-top: 50px;
     top: -100%;
     transition: top .3s;
     z-index: 3;
