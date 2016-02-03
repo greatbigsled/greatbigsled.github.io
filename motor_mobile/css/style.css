@@ -1,20 +1,79 @@
-html, body {
-    font-family: sans-serif;
-    background-color: #BBCCA8;
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* you need to set this to assign to the main element a min height of 100% */
+    height: 100%;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #E02222;
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/*--------------------------------------------------------------*/
+
+/* --------------------------------
+
+Header style
+
+-------------------------------- */
 header {
     position: fixed;
     top: 0;
     height: 50px;
     width: 100%;
-    background-color: #4e6361;
+    background-color: #fff;
+    z-index: 99999;
+    box-shadow: 0 1px 3px #ddd;
 }
 
 .header-trigger {
     width: 40px;
-    background-color: #64807d;
+    border-radius: 4px;
+    background-color: #e34f00;
     height: 40px;
     display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+.header-trigger-menu {
+    background-image: url('../images/ico-hamburger.png');
+}
+.header-trigger-search {
+    background-image: url('../images/ico-search.png');
+}
+.header-trigger-account {
+    background-image: url('../images/ico-user.png');
+}
+.header-trigger-cart {
+    background-image: url('../images/ico-cart.png');
 }
 .header-triggers-right {
     float: right;
@@ -34,87 +93,90 @@ header {
 
 
 
-/*         MAIN                      */
-/*--------------------------------------------------*/
+/* --------------------------------
+
+Main content style
+
+-------------------------------- */
 main {
     margin: 5px;
     padding: 5px;
     margin-top: 50px;
     background-color: #fff;
 }
+.main-section {
+    margin: 20px 0;
+}
 .h1 {
     display: block;
     text-align: center;
-    /*padding: 5px;*/
+    margin: 5px auto;
 }
+/*     SEARCH SECTION        */
+
 .search-block {
     text-align: center;
+    position: relative;
 }
 .search-block input{
     height: 24px;
     line-height: 20px;
     font-size: 16px;
-    width: 230px;
+    width: 100%;
     margin-bottom: 0;
     padding: 3px;
+    padding-right: 68px;
 }
 
 .search-block a {
+    position: absolute;
+    right: 0;
+    top: 0;
     display: inline-block;
-    vertical-align: bottom;
-    padding: 3px 4px;
-    height: 18px;
-    line-height: 18px;
+    vertical-align: middle;
+    padding: 0px 5px;
+    height: 24px;
+    line-height: 24px;
     font-size: 18px;
-    background-color: #64807d;
     color: #fff;
+    background-color: #e34f00;
     text-decoration: none;
-    border-radius: 4px;
 }
+/*--------------------------------------------------*/
 
-.sections {
+/*    SMALL MENU SECTION      */
+.small-menu {
     margin-top: 20px;
     border-bottom: 1px solid #4e6361;
 }
-.section {
-    padding: 5px;
-    margin-bottom: 5px;
+.small-menu-item {
+    padding: 8px;
+    margin-bottom: 8px;
     color: #fff;
-    background-color: #4e6361;
+    background-color: #fff;
     text-align: center;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.5)
+}
+.small-menu-item-l {
+    float: left;
+    width: 49%;
+}
+.small-menu-item-r {
+    float: right;
+    width: 49%;
 }
 
+/*-----------------------------------------------*/
 
-.slider {
-    margin-top: 5px;
-    text-align: center;
-}
-.slider-nav{
-    font-weight: 600;
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    width: 20px;
-    color: #fff;
-    background-color: #343642;
-}
-.slider-main {
-    position: relative;
-    display: inline-block;
-    background-color: #343642;
-    height: 50px;
-    line-height: 50px;
-    color: #fff;
-    padding: 0 10px;
-    width: 231px;
-}
-.slider-caption {
-    /*position: absolute;*/
-    /*left: 5px;*/
-    /*bottom: 5px;*/
-}
+/*   ЗАГЛУШКА ДЛЯ МЕНЮ РЕКЛАМЫ И СКИДОК                   */
+.adv-template {
+    width: 100%;
+    height: 60px;
 
+    text-align: center;
+    outline: 1px solid;
+}
+/*--------------------------------------------------------*/
 .goods {
     margin-top: 10px;
 }
@@ -178,3 +240,95 @@ main {
     transform: translateX(-50%);
     font-size: 12px;
 }
+
+
+
+
+
+/*-------------------------------------*/
+.shadow-layer {
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(67, 87, 121, 0.6);
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+.shadow-layer.is-visible {
+    display: block;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/*  САЙДБАР КОРЗИНЫ         */
+.cart-sidebar {
+    
+
+    position: fixed;
+    width: 260px;
+    top: 0;
+    padding-top: 50px;
+    height: 100%;
+
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    background-color: #fff;
+    transition: right 0.3s;
+    right: -100%;
+    z-index: 3;
+}
+#cart.speed-in {
+    right: 0;
+}
+
+
+/*  САЙДБАР МЕНЮ         */
+.menu-sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    padding-top: 50px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    transition: right 0.3s;
+    background-color: #fff;
+    left: -100%;
+    background: #FFF;
+    transition: left 0.3s;
+}
+#side-menu.speed-in {
+    left: 0;
+}
+
+
+/*  САЙДБАР ПОИСКА   */
+.search-sidebar {
+    position: fixed;
+    background-color: #444;
+    top: 0;
+    width: 100%;
+    /*padding: 5px;*/
+    padding-top: 50px;
+    top: -100%;
+    transition: top .3s;
+    z-index: 3;
+}
+.search-sidebar input {
+    width: 100%;
+    /*padding-right: 30px;*/
+    /*position: absolute;*/
+}
+#search.speed-in {
+    top: 0;
+}
+
+
+/*     МОДАЛЬНОЕ ОКНО АККАУНТА    */

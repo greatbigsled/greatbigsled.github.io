@@ -15,12 +15,11 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon
@@ -35,80 +34,313 @@
   <!-- <div class="container"> -->
     <header>
 
-            <div class="header-triggers-left">
-                <div class="header-trigger"></div>
-                <div class="header-trigger"></div>
-            </div>
+        <div class="header-triggers-left">
+            <div id="menu-trigger" class="header-trigger header-trigger-menu"></div>
+            <div id="search-trigger" class="header-trigger header-trigger-search"></div>
+        </div>
 
-            <div class="header-caption">
-                <span>Чебоксары</span><br>
-                <span>+79276665544</span>
-            </div>
-            
-            <div class="header-triggers-right">
-                <div class="header-trigger"></div>
-                <div class="header-trigger"></div>
-            </div>
-        </header>
-        <main>
-            <span class="h1">Интернет-магазин автозапчастей для иномарок и отечественных авто</span>
+        <div class="header-caption">
+            <span>Чебоксары</span><br>
+            <span>+79276665544</span>
+        </div>
 
-            <div class="search-block">
-                <input placeholder="Введите артикул" type="text">
-                <a href="#">Искать</a>
-            </div>
+        <div class="header-triggers-right">
+            <div id="account-trigger" class="header-trigger header-trigger-account"></div>
+            <div id="cart-trigger" class="header-trigger header-trigger-cart"></div>
+        </div>
+    </header>
 
-            <div class="sections">
-                <div class="container">
-                    <div class="section one-half column ">Оплата</div>
-                    <div class="section one-half column">Контакты</div>
+    <main>
+        <span class="h1">Интернет-магазин автозапчастей для иномарок и отечественных авто</span>
+
+        <div class="search-block main-section">
+            <input placeholder="Введите артикул" type="text">
+            <a href="#">Искать</a>
+        </div>
+
+        <div class="adv-template main-section">
+            <p>Здесь будет реклама и предложения по товарам</p>
+        </div>
+
+        <div class="small-menu main-section">
+            <div class="small-menu-container clearfix">
+                <div class="small-menu-item small-menu-item-l ">
+                    <a>Оплата</a>
                 </div>
-                <div class="container">
-                    <div class="section one-half column ">Доставка</div>
-                    <div class="section one-half column">Партнерам</div>
-                </div>
-            </div>
-
-            <div class="slider">
-                <div class="slider-nav slider-left"><</div>
-                <div class="slider-main">
-                    <span class="slider-caption">Моторное масло Caterham</span>
-                </div>
-                <div class="slider-nav slider-right">></div>
-            </div>
-
-            <div class="goods">
-                <div>
-                    <div class="good-item">
-                        <span>Масла<br>и химия</span>
-                    </div>
-                    <div class="good-item">
-                        <span>Диски</span>
-                    </div>
-                    <div class="good-item">
-                        <span>Шины</span>
-                    </div>
-
-                    <div class="good-item">
-                        <span>Аккумуляторы</span>
-                    </div>
-                    <div class="good-item">
-                        <span>Расходники</span>
-                    </div>
-                    <div class="good-item">
-                        <span>Электроника</span>
-                    </div>
-
-                    <div class="good-item">
-                        <span>Автозвук</span>
-                    </div>
+                <div class="small-menu-item small-menu-item-r">
+                    <a>Контакты</a>
                 </div>
             </div>
-        </main>
+            <div class="small-menu-container clearfix">
+                <div class="small-menu-item small-menu-item-l">
+                    <a>Доставка</a>
+                </div>
+                <div class="small-menu-item small-menu-item-r">
+                    <a>Партнерам</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-model-select-section main-section">
+            <label for="car-model-select">Выберите детали для вашей марки автомобиля: </label>
+            <select name="car-models" id="car-model-select">
+                <option value="ваз">ВАЗ</option>
+                <option value="acura">Acura</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">Bmw</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="chery">Chery</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="citroen">Citroen</option>
+                <option value="daewoo">Daewoo</option>
+                <option value="dodge">Dodge</option>
+                <option value="fiat">Fiat</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="jeep">Jeep</option>
+                <option value="kia">Kia</option>
+                <option value="land rover">Land rover</option>
+                <option value="lexus">Lexus</option>
+                <option value="lifan">Lifan</option>
+                <option value="mazda">Mazda</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="mitsubishi">Mitsubishi</option>
+                <option value="nissan">Nissan</option>
+                <option value="opel">Opel</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="porsche">Porsche</option>
+                <option value="renault">Renault</option>
+                <option value="saab">Saab</option>
+                <option value="skoda">Skoda</option>
+                <option value="ssangyong">Ssangyong</option>
+                <option value="subaru">Subaru</option>
+                <option value="suzuki">Suzuki</option>
+                <option value="toyota">Toyota</option>
+                <option value="volvo">Volvo</option>
+                <option value="volkswagen">Volkswagen</option>
+            </select>
+        </div>
+
+
+        <div class="goods main-section">
+            <div>
+                <div class="good-item">
+                    <span>Масла<br>и химия</span>
+                </div>
+                <div class="good-item">
+                    <span>Диски</span>
+                </div>
+                <div class="good-item">
+                    <span>Шины</span>
+                </div>
+
+                <div class="good-item">
+                    <span>Аккумуляторы</span>
+                </div>
+                <div class="good-item">
+                    <span>Расходники</span>
+                </div>
+                <div class="good-item">
+                    <span>Электроника</span>
+                </div>
+
+                <div class="good-item">
+                    <span>Автозвук</span>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+        <div id="shadow" class="shadow-layer"></div>
+        <div id="cart" class="cart-sidebar">
+          <div class="cart-wrap">
+            <div class="cart-header">Корзина</div>
+            <div class="cart-items-list">
+              <ul class="cd-cart-items">
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+
+
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+
+                <li>
+                  <span class="cd-qty">2x</span> Product Name
+                  <div class="cd-price">$19.98</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+                <li>
+                  <span class="cd-qty">1x</span> Product Name
+                  <div class="cd-price">$9.99</div>
+                  <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
+                </li>
+
+              </ul> <!-- cd-cart-items -->
+            </div>
+            <div class="cart-total">
+              Всего 5001 руб.
+            </div>
+            <div class="cart-checkout">
+              <a href="#">Оплатить</a>
+            </div>
+
+          </div>
+        </div>
+        <div id="side-menu" class="menu-sidebar">
+            <a href="#0" class="submenu-open">Каталоги запчастей</a>
+                <ul class="sub-menu" style="display:block">
+                    <li><a href="#0">Автостекла</a></li>
+                    <li><a href="#0">Аккумуляторы</a></li>
+                    <li><a href="#0">Стартеры</a></li>
+                    <li><a href="#0">Генераторы</a></li>
+                    <li><a href="#0">Оптика</a></li>
+                    <li><a href="#0">Шины</a></li>
+                    <li><a href="#0">Диски</a></li>
+                    <li><a href="#0">Фильтры</a></li>
+                    <li><a href="#0">Моторные масла</a></li>
+                    <li><a href="#0">Трансмиссионные масла</a></li>
+                    <li><a href="#0">Лампочки</a></li>
+                    <li><a href="#0">Подшипники</a></li>
+                    <li><a href="#0">Колодки-накладки</a></li>
+                </ul>
+            <a href="#0" class="submenu-open">Доставка заказов</a><br>
+            <a href="#0" class="submenu-open">Способы оплаты</a><br>
+            <a href="#0" class="submenu-open">Партнерам</a><a href="#0" class="submenu-open">Доставка заказов</a><br>
+            <a href="#0" class="submenu-open">Способы оплаты</a><br>
+            <a href="#0" class="submenu-open">Партнерам</a><a href="#0" class="submenu-open">Доставка заказов</a><br>
+            <a href="#0" class="submenu-open">Способы оплаты</a><br>
+            <a href="#0" class="submenu-open">Партнерам</a><a href="#0" class="submenu-open">Доставка заказов</a><br>
+            <a href="#0" class="submenu-open">Способы оплаты</a><br>
+            <a href="#0" class="submenu-open">Партнерам</a><a href="#0" class="submenu-open">Доставка заказов</a><br>
+            <a href="#0" class="submenu-open">Способы оплаты</a><br>
+            <a href="#0" class="submenu-open">Партнерам</a>
+        </div>
+        <div id="search" class="search-sidebar">
+            <a href="">Поиск</a>
+            <input type="text">
+        </div>
+        <div id="account" class="account-sidebar">
+          <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+            <ul class="cd-switcher">
+              <li><a href="#0">Sign in</a></li>
+              <li><a href="#0">New account</a></li>
+            </ul>
+
+            <div id="cd-login"> <!-- log in form -->
+              <form class="cd-form">
+                <p class="fieldset">
+                  <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                  <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <label class="image-replace cd-password" for="signin-password">Password</label>
+                  <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+                  <a href="#0" class="hide-password">Hide</a>
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <input type="checkbox" id="remember-me" checked>
+                  <label for="remember-me">Remember me</label>
+                </p>
+
+                <p class="fieldset">
+                  <input class="full-width" type="submit" value="Login">
+                </p>
+              </form>
+              
+              <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+              <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-login -->
+
+            <div id="cd-signup"> <!-- sign up form -->
+              <form class="cd-form">
+                <p class="fieldset">
+                  <label class="image-replace cd-username" for="signup-username">Username</label>
+                  <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                  <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <label class="image-replace cd-password" for="signup-password">Password</label>
+                  <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+                  <a href="#0" class="hide-password">Hide</a>
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <input type="checkbox" id="accept-terms">
+                  <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                </p>
+
+                <p class="fieldset">
+                  <input class="full-width has-padding" type="submit" value="Create account">
+                </p>
+              </form>
+
+              <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-signup -->
+
+            <div id="cd-reset-password"> <!-- reset password form -->
+              <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+              <form class="cd-form">
+                <p class="fieldset">
+                  <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                  <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                  <input class="full-width has-padding" type="submit" value="Reset password">
+                </p>
+              </form>
+
+              <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+            </div> <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+          </div> <!-- cd-user-modal-container -->
+        </div>
 
         
   <!-- </div> -->
 
+
+
+    <script src="script.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
