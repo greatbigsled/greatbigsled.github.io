@@ -343,14 +343,19 @@ main {
     right: 0;
 }
 
+/*------------------------------------------------------*/
 
 /*  САЙДБАР МЕНЮ         */
+/*------------------------------------------------------*/
+
 .menu-sidebar {
+    padding: 0;
+    padding-top: 50px;
     position: fixed;
     top: 0;
     height: 100%;
     width: 260px;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     z-index: 3;
@@ -363,9 +368,32 @@ main {
 #side-menu.speed-in {
     left: 0;
 }
-
-
+.sidebar-main-link {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    border-bottom: 1px solid #e0e6ef;
+    color: #435779;
+}
+.menu-sidebar .sidebar-sub-menu {
+    background-color: #f9f9f9;
+    margin: 0;
+    list-style-type: none;
+    padding-left: 30px;
+}
+.menu-sidebar .sidebar-sub-menu a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    /*border-bottom: 1px solid #e0e6ef;*/
+    color: #435779;
+}
+/*------------------------------------------------------*/
 /*  САЙДБАР ПОИСКА   */
+/*------------------------------------------------------*/
+
 .search-sidebar {
     position: fixed;
     background-color: #fff;
@@ -387,8 +415,10 @@ main {
     top: 0;
 }
 
+/*----------------------------------------------------*/
 
 /*     МОДАЛЬНОЕ ОКНО АККАУНТА    */
+/*-----------------------------------------------------*/
 #account.speed-in {
     top: 0;
     visibility: visible;
