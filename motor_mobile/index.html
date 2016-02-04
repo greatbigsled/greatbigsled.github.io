@@ -286,11 +286,11 @@
                     <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Ваше имя">
                     <span class="m21-error-message">Error message here!</span>
                 </p>
-                <p class="fieldset">
-                    <label class="image-replace m21-surname" for="signup-surname">Фамилия</label>
-                    <input class="full-width has-padding has-border" id="signup-surname" type="text" placeholder="Ваша фамилия">
-                    <span class="m21-error-message">Error message here!</span>
-                </p>
+                <!--<p class="fieldset">-->
+                    <!--<label class="image-replace m21-surname" for="signup-surname">Фамилия</label>-->
+                    <!--<input class="full-width has-padding has-border" id="signup-surname" type="text" placeholder="Ваша фамилия">-->
+                    <!--<span class="m21-error-message">Error message here!</span>-->
+                <!--</p>-->
                 <p class="fieldset">
                     <label class="image-replace m21-phone" for="signup-phone">Телефон</label>
                     <input class="full-width has-padding has-border" id="signup-phone" type="text" placeholder="Телефон">
@@ -308,16 +308,35 @@
                     <span class="m21-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
-                    <div>
+                    <label class="image-replace m21-city" for="signup-city">Город</label>
+                    <select class="full-width has-padding has-border" name="city" id="signup-city">
+                        <option value="">Ваш город</option>
+                        <option value="CHB">Чебоксары</option>
+                        <option value="NCHB">Новочебоксарск</option>
+                        <option value="KAZ">Казань</option>
+                    </select>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace m21-sale-address" for="signup-sale-address">Пункт выдачи</label>
+                    <select class="full-width has-padding has-border" name="sale-address" id="signup-sale-address">
+                        <option value="">Пункт выдачи</option>
+                        <option value="CHB">Яковлева, 27</option>
+                        <option value="NCHB">Коммунальная, 22</option>
+                        <option value="KAZ">Космонавтов, 26А</option>
+                    </select>
+                </p>
+
+                <p class="fieldset">
+
                         <input type="checkbox" id="accept-news">
                         <label for="accept-news">Подписаться на новости сайта</label>
-                    </div>
-                    <br/>
-                    <div>
+                </p>
+
+                <p class="fieldset">
                         <input type="checkbox" id="accept-terms">
                         <label for="accept-terms">Я согласен с <a href="#0">условиями соглашения</a></label>
-                    </div>
                 </p>
+
                 <p class="fieldset">
                     <input class="full-width has-padding" type="submit" value="Зарегистрироваться">
                 </p>
@@ -326,7 +345,7 @@
         </div>
 
         <div id="m21-reset-password"> <!-- reset password form -->
-            <p class="m21-form-message">Забыли пароль? Напишите свой почтовый адрес и мы напишем как поменять пароль.</p>
+            <p class="m21-form-message">Забыли пароль? Введите свой почтовый адрес и мы расскажем как поменять пароль.</p>
 
             <form class="m21-form">
                 <p class="fieldset">

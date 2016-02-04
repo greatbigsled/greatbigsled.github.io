@@ -466,6 +466,10 @@ main {
     position: relative;
     margin: 20px 0;
 }
+#m21-signup .m21-form .fieldset {
+    position: relative;
+    margin: 10px 0;
+}
 .m21-form label {
     font-size: 14px;
     font-size: 0.875rem;
@@ -503,16 +507,26 @@ main {
 .m21-form label.m21-password {
     background-image: url("../images/ico-password-black.png");
 }
-.m21-form input {
+.m21-form label.m21-phone {
+    background-image: url("../images/ico-phone-black.png");
+}
+
+.m21-form input, .m21-form select.has-border {
     margin: 0;
     padding: 0;
     border-radius: 0.25em;
 }
-.m21-form input.full-width {
+.m21-form input.full-width, .m21-form select.has-border  {
     width: 100%;
 }
 .m21-form input.has-padding {
     padding: 12px 20px 12px 50px;
+}
+.m21-form select.has-border {
+    border: 1px solid #d2d8d8;
+    padding: 12px 20px 12px 12px;
+    background-color: #fff;
+    color: #A9A9A9;
 }
 .m21-form input.has-border {
     border: 1px solid #d2d8d8;
@@ -522,7 +536,7 @@ main {
     -o-appearance: none;
     appearance: none;
 }
-.m21-form input.has-border:focus {
+.m21-form input.has-border:focus, .m21-form select.has-border:focus {
     border-color: #343642;
     box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
     outline: none;
