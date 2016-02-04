@@ -368,9 +368,11 @@ main {
 /*     МОДАЛЬНОЕ ОКНО АККАУНТА    */
 #account.speed-in {
     top: 0;
+    visibility: visible;
 }
 .account-sidebar {
     position: fixed;
+    visibility: hidden;
     top: -100%;
     transition: top .3s;
     z-index: 3;
