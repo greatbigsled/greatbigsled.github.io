@@ -1,10 +1,10 @@
 (function(){
-    var menu = document.getElementById('side-menu'),
-        cart = document.getElementById('cart'),
-        search = document.getElementById('search'),
-        account = document.getElementById('account'),
-        shadow = document.getElementById('shadow'),
-        body = document.body;
+    var menu     = document.getElementById('side-menu'),
+        cart     = document.getElementById('cart'),
+        search   = document.getElementById('search'),
+        account  = document.getElementById('account'),
+        shadow   = document.getElementById('shadow'),
+        body     = document.body;
 
 
     document.getElementById('cart-trigger').addEventListener('click', function(e) {
@@ -60,4 +60,88 @@
             }
         }
     }
+
+
+    var loginTrigger        = document.getElementById('account-login-trigger'),
+        signUpTrigger       = document.getElementById('account-sign-up-trigger'),
+        forgotPassTrigger   = document.getElementById('forgot-pass-trigger'),
+        backToLoginTrigger  = document.getElementById('back-to-login-trigger'),
+        loginBlock          = document.getElementById('m21-login'),
+        sugnUpBlock         = document.getElementById('m21-signup'),
+        forgotPassBlock     = document.getElementById('m21-reset-password'),
+        showPassButtons     = document.getElementsByClassName('hide-password');
+
+
+    showPassButtons[0].addEventListener('click', function (e) {
+        e.preventDefault();
+
+        hideShowPass(this);
+    })
+
+    showPassButtons[1].addEventListener('click', function (e) {
+        e.preventDefault();
+
+        hideShowPass(this);
+    })
+
+    loginTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        loginSelected();
+    })
+
+    signUpTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        signUpSelected();
+    })
+
+    forgotPassTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        forgotPassSelected();
+    })
+
+
+    backToLoginTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        loginSelected();
+    })
+
+    function loginSelected() {
+        loginTrigger.classList.add('selected');
+        signUpTrigger.classList.remove('selected');
+
+        loginBlock.classList.add('is-selected');
+        sugnUpBlock.classList.remove('is-selected');
+        forgotPassBlock.classList.remove('is-selected');
+    }
+
+    function signUpSelected() {
+        signUpTrigger.classList.add('selected');
+        loginTrigger.classList.remove('selected');
+
+        sugnUpBlock.classList.add('is-selected');
+        loginBlock.classList.remove('is-selected');
+        forgotPassBlock.classList.remove('is-selected');
+    }
+
+    function forgotPassSelected() {
+        loginTrigger.classList.add('selected');
+        signUpTrigger.classList.remove('selected');
+
+        forgotPassBlock.classList.add('is-selected');
+        sugnUpBlock.classList.remove('is-selected');
+        loginBlock.classList.remove('is-selected');
+    }
+
+    function hideShowPass(button) {
+        var passField = button.previousElementSibling;
+
+        (('password' == passField.getAttribute('type')) ? passField.setAttribute('type', 'text') : passField.setAttribute('type', 'password'));
+        (('Скрыть' == button.textContent) ? button.textContent = 'Показать' : button.textContent = 'Скрыть')
+    }
+
+
 })();

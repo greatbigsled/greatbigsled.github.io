@@ -262,13 +262,13 @@ main {
     background: rgba(67, 87, 121, 0.6);
     cursor: pointer;
     z-index: 2;
-    /*display: none;*/
+    display: none;
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
 }
 .shadow-layer.is-visible {
-    /*display: block;*/
+    display: block;
     opacity: 1;
     visibility: visible;
 }
@@ -281,7 +281,6 @@ main {
 .modal-container {
     padding: 10px;
     padding-top: 60px;
-    box-shadow: 0 1px 3px #ddd;
 }
 
 /*  САЙДБАР КОРЗИНЫ         */
@@ -349,3 +348,256 @@ main {
 
 
 /*     МОДАЛЬНОЕ ОКНО АККАУНТА    */
+#account.speed-in {
+    top: 0;
+}
+.account-sidebar {
+    position: fixed;
+    top: -100%;
+    transition: top .3s;
+    z-index: 3;
+    width: 100%;
+}
+.m21-user-modal-container {
+    position: relative;
+    /*top: 0;*/
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+    background: #FFF;
+    cursor: auto;
+    border-radius: 0.25em;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.m21-switcher {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.m21-switcher li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.m21-switcher li:first-child a {
+    border-radius: .25em 0 0 0;
+}
+.m21-switcher li:last-child a {
+    border-radius: 0 .25em 0 0;
+}
+.m21-switcher a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #d2d8d8;
+    color: #809191;
+}
+.m21-switcher a.selected {
+    background: #FFF;
+    color: #505260;
+}
+
+
+
+
+/*  ПОЛЯ ВХОДА В АККАУНТ*/
+.m21-form {
+    padding: 10px;
+}
+.m21-form .fieldset {
+    position: relative;
+    margin: 20px 0;
+}
+.m21-form label {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+.m21-form label.image-replace {
+    /* replace text with an icon */
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+    text-shadow: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+}
+.m21-form label.m21-username {
+    background-image: url("../images/ico-user-black.png");
+}
+.m21-form label.m21-email {
+    background-image: url("../images/ico-email-black.png");
+}
+.m21-form label.m21-password {
+    background-image: url("../images/ico-password-black.png");
+}
+.m21-form input {
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+}
+.m21-form input.full-width {
+    width: 100%;
+}
+.m21-form input.has-padding {
+    padding: 12px 20px 12px 50px;
+}
+.m21-form input.has-border {
+    border: 1px solid #d2d8d8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.m21-form input.has-border:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+/**/
+.m21-form input.has-error {
+    border: 1px solid #d76666;
+}
+.m21-form input[type=password] {
+    /* space left for the HIDE button */
+    padding-right: 65px;
+}
+.m21-form input[type=submit] {
+    padding: 16px 0;
+    cursor: pointer;
+    background: #e34f00;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.no-touch .m21-form input[type=submit]:hover, .no-touch .m21-form input[type=submit]:focus {
+    background: #3599ae;
+    outline: none;
+}
+.m21-form .hide-password {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 15px;
+    border-left: 1px solid #d2d8d8;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #343642;
+}
+.m21-form .m21-error-message {
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+    bottom: -35px;
+    background: rgba(215, 102, 102, 0.9);
+    padding: .8em;
+    z-index: 2;
+    color: #FFF;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    border-radius: 0.25em;
+    /* prevent click and touch events */
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s 0, visibility 0 0.2s;
+    -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
+    transition: opacity 0.2s 0, visibility 0 0.2s;
+}
+.m21-form .m21-error-message::after {
+    /* triangle */
+    content: '';
+    position: absolute;
+    left: 22px;
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(215, 102, 102, 0.9);
+}
+.m21-form .m21-error-message.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.2s 0, visibility 0 0;
+    -moz-transition: opacity 0.2s 0, visibility 0 0;
+    transition: opacity 0.2s 0, visibility 0 0;
+}
+.m21-form-message {
+    padding: 1.4em 1.4em 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+.m21-form-bottom-message {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -50px;
+    text-align: center;
+    font-size: 16px;
+    font-size: 0.875rem;
+}
+.m21-form-bottom-message a {
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.m21-close-form {
+    /* form X button on top right */
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: -40px;
+    background: url("../img/cd-icon-close.svg") no-repeat center center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#m21-login, #m21-signup, #m21-reset-password {
+    display: none;
+}
+#m21-login.is-selected, #m21-signup.is-selected, #m21-reset-password.is-selected {
+    display: block;
+}
