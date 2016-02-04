@@ -262,8 +262,8 @@
                 </p>
                 <p class="fieldset">
                     <label class="image-replace m21-password" for="signin-password">Пароль</label>
-                    <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Пароль">
-                    <a href="#0" class="hide-password">Показать</a>
+                    <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Пароль">
+                    <a href="#0" class="hide-password">Скрыть</a>
                     <span class="m21-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
@@ -283,7 +283,17 @@
             <form class="m21-form">
                 <p class="fieldset">
                     <label class="image-replace m21-username" for="signup-username">Имя пользователя</label>
-                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Ваше имя">
+                    <span class="m21-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace m21-surname" for="signup-surname">Фамилия</label>
+                    <input class="full-width has-padding has-border" id="signup-surname" type="text" placeholder="Ваша фамилия">
+                    <span class="m21-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace m21-phone" for="signup-phone">Телефон</label>
+                    <input class="full-width has-padding has-border" id="signup-phone" type="text" placeholder="Телефон">
                     <span class="m21-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
@@ -293,13 +303,20 @@
                 </p>
                 <p class="fieldset">
                     <label class="image-replace m21-password" for="signup-password">Пароль</label>
-                    <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Пароль">
-                    <a href="#0" class="hide-password">Показать</a>
+                    <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Пароль">
+                    <a href="#0" class="hide-password">Скрыть</a>
                     <span class="m21-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
-                    <input type="checkbox" id="accept-terms">
-                    <label for="accept-terms">Я согласен с <a href="#0">условиями соглашения</a></label>
+                    <div>
+                        <input type="checkbox" id="accept-news">
+                        <label for="accept-news">Подписаться на новости сайта</label>
+                    </div>
+                    <br/>
+                    <div>
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">Я согласен с <a href="#0">условиями соглашения</a></label>
+                    </div>
                 </p>
                 <p class="fieldset">
                     <input class="full-width has-padding" type="submit" value="Зарегистрироваться">

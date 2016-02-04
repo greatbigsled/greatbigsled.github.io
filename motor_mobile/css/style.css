@@ -200,6 +200,29 @@ main {
     text-align: center;
 }
 
+.car-model-select-section select {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #d2d8d8;
+    border-radius: 4px;
+    padding: 8px; /* If you add too much padding here, the options won't show in IE */
+    width: 90%;
+}
+.car-model-select-section select:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------------*/
 .goods {
     margin-top: 10px;
 }
@@ -377,6 +400,7 @@ main {
     transition: top .3s;
     z-index: 3;
     width: 100%;
+    height: 100%;
 }
 .m21-user-modal-container {
     position: relative;
@@ -429,7 +453,10 @@ main {
 }
 
 
+#account {
+    overflow-y: auto;
 
+}
 
 /*  ПОЛЯ ВХОДА В АККАУНТ*/
 .m21-form {
