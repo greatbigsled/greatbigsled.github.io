@@ -144,4 +144,27 @@
     }
 
 
+
+
+
+    document.getElementById('m21-parts-select-results').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var tar = e.target;
+        while (tar != this) {
+            if (tar.className.indexOf('m21-parts-select__item') > -1) {
+                document.getElementById('m21-parts-select__item-modal').classList.add('is-visible');
+                console.log('AAAAAAAAAAAAAAAAAAAAAA!!!!!!');
+                return;
+            }
+            tar = tar.parentNode;
+        }
+        console.log(e);
+    })
+
+    document.getElementById('m21-parts-select__item-modal_close').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.getElementById('m21-parts-select__item-modal').classList.remove('is-visible');
+    })
 })();

@@ -30,6 +30,15 @@ a {
     color: #E02222;
     text-decoration: none;
 }
+.m21-mobile-h1 {
+    margin: 6px auto 10px;
+
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
 
 .clearfix:after {
     content: '';
@@ -703,4 +712,256 @@ main {
 }
 #m21-login.is-selected, #m21-signup.is-selected, #m21-reset-password.is-selected {
     display: block;
+}
+
+
+/*---------------------------------------------------------------
+
+88""Yb    db    88""Yb 888888 .dP"Y8     .dP"Y8 888888 88     888888  dP""b8 888888     .dP"Y8 888888 Yb  dP 88     888888 .dP"Y8 
+88__dP   dPYb   88__dP   88   `Ybo."     `Ybo." 88__   88     88__   dP   `"   88       `Ybo."   88    YbdP  88     88__   `Ybo." 
+88"""   dP__Yb  88"Yb    88   o.`Y8b     o.`Y8b 88""   88  .o 88""   Yb        88       o.`Y8b   88     8P   88  .o 88""   o.`Y8b 
+88     dP""""Yb 88  Yb   88   8bodP'     8bodP' 888888 88ood8 888888  YboodP   88       8bodP'   88    dP    88ood8 888888 8bodP' 
+
+----------------------------------------------------------------*/
+.m21-parts-select-form .parts-select-section {
+    margin: 4px auto 10px;
+
+    /*outline: 1px solid;*/
+}
+.parts-select-section label {
+    float: left;
+}
+.parts-select-section select {
+    float: right;
+}
+.parts-select-section select {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #d2d8d8;
+    border-radius: 4px;
+    padding: 4px; /* If you add too much padding here, the options won't show in IE */
+    width: 50%;
+}
+.parts-select-section select:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+.m21-parts-select__item {
+    border-bottom: 1px solid #dedede;
+    padding: 5px
+}
+.m21-parts-select__item .item-descriptions {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    color: gray;
+}
+.m21-parts-select__item .item-price-quick {
+    float: right;
+    width: 50%;
+    font-size: 24px;
+    color: #e34f00;
+}
+/****************************************************/
+/*            MODAL           */
+
+.m21-parts-select__item-modal.is-visible {
+    display: block;
+}
+.m21-parts-select__item-modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.m21-parts-select__item-modal_close {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: red;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 50%;
+}
+.m21-parts-select__item-modal_wrapper {
+    position: relative;
+    width: 90%;
+    background-color: #fff;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.item-modal__img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background-image: url("../images/accum_image.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.item-modal__table {
+    margin: 8px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    margin: 10px auto;
+}
+.item-modal__table tr:nth-child(even) {
+    background-color: #dedede;
+}
+.item-modal__buy_price {
+    float: left;
+    width: 50%;
+}
+.item-modal__buy_btn {
+    float: right;
+    width: 50%;
+}
+/* --------------------------------------------------------------------------------------------------------------
+
+88""Yb    db    88""Yb 888888 .dP"Y8     .dP"Y8 888888 888888 88""Yb .dP"Y8     .dP"Y8 888888 Yb  dP 88     888888 .dP"Y8 
+88__dP   dPYb   88__dP   88   `Ybo."     `Ybo."   88   88__   88__dP `Ybo."     `Ybo."   88    YbdP  88     88__   `Ybo." 
+88"""   dP__Yb  88"Yb    88   o.`Y8b     o.`Y8b   88   88""   88"""  o.`Y8b     o.`Y8b   88     8P   88  .o 88""   o.`Y8b 
+88     dP""""Yb 88  Yb   88   8bodP'     8bodP'   88   888888 88     8bodP'     8bodP'   88    dP    88ood8 888888 8bodP' 
+
+-------------------------------------------------------------------------------------------------------------- */
+.parts-select-step {
+    padding: 5px 0;
+}
+.parts-select-step label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.parts-select-step select {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #d2d8d8;
+    border-radius: 4px;
+    padding: 4px; /* If you add too much padding here, the options won't show in IE */
+    width: 100%;
+}
+.parts-select-step select:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+
+888888  dP"Yb   dP"Yb  888888 888888 88""Yb 
+88__   dP   Yb dP   Yb   88   88__   88__dP 
+88""   Yb   dP Yb   dP   88   88""   88"Yb  
+88      YbodP   YbodP    88   888888 88  Yb 
+
+---------------------------------------------------------------------------------------------  */
+.pre-bottom {
+    background-color: #313030;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+.pre-bottom__contacts {
+    float: right;
+    width: 50%;
+}
+.pre-bottom__info {
+    float: left;
+    width: 50%;
+}
+.the-very-bottom-copyright {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #dedede;
+    background-color: #272626;
+}
+
+/* ----------------------------------------------------------------
+
+.dP"Y8 888888    db    88""Yb  dP""b8 88  88 
+`Ybo." 88__     dPYb   88__dP dP   `" 88  88 
+o.`Y8b 88""    dP__Yb  88"Yb  Yb      888888 
+8bodP' 888888 dP""""Yb 88  Yb  YboodP 88  88 
+---------------------------------------------------------------------- */
+.sort-btns {
+    padding: 8px 5px;
+}
+.sort-btn {
+    float: left;
+    width: 50%;
+    /*padding: 8px;*/
+    text-align: center;
+}
+.sort-btn label{
+    display: block;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.sort-btn input[type="radio"] {
+    display: none;
+}
+.sort-btn input[type="radio"]:checked+label {
+    background-color: #e34f00;
+    color: #fff;
+}
+
+.search-producers-block__producers-trigger {
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed;
+
+    background-color: #fff;
+    box-shadow: 1px -1px 1px 0px rgba(0, 0, 0, .4);
+}
+.search-producers-block__producers-trigger:active, .search-producers-block__producers-trigger:focus {
+    border: none;
+    border-bottom: 1px dashed;
+    outline: none;
+    box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, .4);
+}
+.search-producer-item input {
+    display: none;
+}
+.search-producer-item {
+    float: left;
+    width: 50%;
+}
+.search-producer-item label {
+    display: block;
+    padding: 2px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    border: 1px solid #cdcdcd;
+    color: #cdcdcd;
+}
+.search-producer-item input[type="checkbox"]:checked+label {
+    background-color: #e34f00;
+    color: #fff;
 }

@@ -24,7 +24,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
 
 </head>
 <body>
@@ -51,29 +51,30 @@
 </header>
 
 <main>
-   <h1>Подберите аккумуляторы для вашего автомобиля</h1>
+    <h1 class="m21-mobile-h1">Подберите аккумуляторы для вашего автомобиля</h1>
+
     <div class="m21-parts-select-form">
-        <div class="parts-select-section">
+        <div class="parts-select-section clearfix">
             <label for="one">Производитель</label>
             <select name="producer" id="one">
                 <option value="hey">Akom</option>
                 <option value="you">American</option>
                 <option value="out">Banner</option>
                 <option value="there">Bars</option>
-                <option value="In">Bolt</option>
+                <option value="In">Bolterstunerufgh</option>
             </select>
         </div>
-        <div class="parts-select-section">
+        <div class="parts-select-section clearfix">
             <label for="one">Габариты</label>
             <select name="producer" id="one">
-                <option value="hey">Akom</option>
-                <option value="you">American</option>
-                <option value="out">Banner</option>
-                <option value="there">Bars</option>
-                <option value="In">Bolt</option>
+                <option value="hey">111x889x884</option>
+                <option value="you">25x545x889</option>
+                <option value="out">123x456x789</option>
+                <option value="there">546x544x778</option>
+                <option value="In">147x55x321</option>
             </select>
         </div>
-        <div class="parts-select-section">
+        <div class="parts-select-section clearfix">
             <label for="one">Типп клемм</label>
             <select name="producer" id="one">
                 <option value="hey">Akom</option>
@@ -83,7 +84,7 @@
                 <option value="In">Bolt</option>
             </select>
         </div>
-        <div class="parts-select-section">
+        <div class="parts-select-section clearfix">
             <label for="one">Емкость</label>
             <select name="producer" id="one">
                 <option value="hey">Akom</option>
@@ -94,14 +95,135 @@
             </select>
         </div>
 
+        <div class="parts-select-section clearfix">
+            <label for="one">Пусковой ток, А </label>
+            <select name="producer" id="one">
+                <option value="hey">Akom</option>
+                <option value="you">American</option>
+                <option value="out">Banner</option>
+                <option value="there">Bars</option>
+                <option value="In">Bolt</option>
+            </select>
+        </div>
+
+        <div class="parts-select-section clearfix">
+            <label for="one">Полярность</label>
+            <select name="producer" id="one">
+                <option value="hey">Akom</option>
+                <option value="you">American</option>
+                <option value="out">Banner</option>
+                <option value="there">Bars</option>
+                <option value="In">Bolt</option>
+            </select>
+        </div>
+
         <div class="parts-select-buttons">
-            <a href=""></a>
-            <a href=""></a>
+            <a href="#0">Очистить</a>
+            <a href="#0">Подобрать</a>
         </div>
     </div>
 
-    <div class="m21-parts-select-results">
-        <div class="m21-parts-select__item"></div>
+    <div id="m21-parts-select-results" class="m21-parts-select-results">
+        <div class="m21-parts-select__item">
+            <div class="item-name">Аккумуляторная батарея Sznajder Plussia 60033</div>
+            <div class="clearfix">
+                <div class="item-descriptions">
+                    <span class="item-prod-quick">American</span><br>
+                    <span class="item-article-quick">60033</span>
+                </div>
+                <div class="item-price-quick">р. 548.25</div>
+            </div>
+        </div>
+
+        <div class="m21-parts-select__item">
+            <div class="item-name">Аккумулятор 6ст-100 (60038) (850а en</div>
+            <div class="clearfix">
+                <div class="item-descriptions">
+                    <span class="item-prod-quick">American</span><br>
+                    <span class="item-article-quick">60033</span>
+                </div>
+                <div class="item-price-quick">р. 548.25</div>
+            </div>
+        </div>
+
+        <div class="m21-parts-select__item">
+            <div class="item-name">Аккумуляторная батарея Sznajder Plus 60038</div>
+            <div class="clearfix">
+                <div class="item-descriptions">
+                    <span class="item-prod-quick">American</span><br>
+                    <span class="item-article-quick">60033</span>
+                </div>
+                <div class="item-price-quick">р. 548.25</div>
+            </div>
+        </div>
+
+        <div class="m21-parts-select__item">
+            <div class="item-name">Аккумулятор 6ст-60 (56031) (535a en)</div>
+            <div class="clearfix">
+                <div class="item-descriptions">
+                    <span class="item-prod-quick">American</span><br>
+                    <span class="item-article-quick">60033</span>
+                </div>
+                <div class="item-price-quick">р. 548.25</div>
+            </div>
+        </div>
+
+        <div class="m21-parts-select__item">
+            <div class="item-name">Аккумулятор 6ст-100 (60038) (850а en</div>
+            <div class="clearfix">
+                <div class="item-descriptions">
+                    <span class="item-prod-quick">American</span><br>
+                    <span class="item-article-quick">60033</span>
+                </div>
+                <div class="item-price-quick">р. 548.25</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="m21-parts-select__item-modal" class="m21-parts-select__item-modal">
+        <div class="m21-parts-select__item-modal_wrapper">
+        <div id="m21-parts-select__item-modal_close" class="m21-parts-select__item-modal_close">x</div>
+            <div class="item-modal__img"></div>
+            <div class="item-modal__name">Аккумуляторная батарея Banner Starting Bull 56010</div>
+            <table class="item-modal__table">
+                <tr>
+                    <td>Артикул</td>
+                    <td>56008</td>
+                </tr>
+                <tr>
+                    <td>Производитель</td>
+                    <td>Banner</td>
+                </tr>
+                <tr>
+                    <td>Габариты, мм</td>
+                    <td>241x546x122</td>
+                </tr>
+                <tr>
+                    <td>Тип клемм</td>
+                    <td>T1</td>
+                </tr>
+                <tr>
+                    <td>Емкость, А/ч</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Пусковой ток, А</td>
+                    <td>480</td>
+                </tr>
+                <tr>
+                    <td>Полярность</td>
+                    <td>обратная</td>
+                </tr>
+            </table>
+            <div class="item-modal__buy clearfix">
+                <div class="item-modal__buy_price">
+                    р. 5483.56
+                </div>
+                <div class="item-modal__buy_btn">
+                    <a href="#">Купить</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -316,10 +438,6 @@
     </div>
     <!-- cd-user-modal-container -->
 </div>
-
-        
-->
-
 
 
 <script src="../script.js"></script>

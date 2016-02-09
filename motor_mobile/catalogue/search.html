@@ -24,7 +24,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="../image/png" href="images/favicon.png">
 
 </head>
 <body>
@@ -63,54 +63,50 @@
 
 
 
-
-
-
 <main>
-    <h1 class="m21-mobile-h1">Выберите автостекло</h1>
+    <h1 class="m21-mobile-h1">Введите артикул или код детали</h1>
 
-    <div class="m21-parts-steps">
-        <div class="parts-select-step">
-            <label for="one">Марка</label>
-            <select name="producer" id="one">
-                <option value="hey">Nissan</option>
-                <option value="you">American</option>
-                <option value="out">Banner</option>
-                <option value="there">Bars</option>
-                <option value="In">Bolt</option>
-            </select>
-        </div>
+    <div class="search-block main-section">
+        <input placeholder="Введите артикул" type="text">
+        <a href="#">Искать</a>
+    </div>
 
-        <div class="parts-select-step">
-            <label for="one">Модель</label>
-            <select name="producer" id="one">
-                <option value="hey">GTR GT LM Edition</option>
-                <option value="you">American</option>
-                <option value="out">Banner</option>
-                <option value="there">Bars</option>
-                <option value="In">Bolt</option>
-            </select>
-        </div>
-
-        <div class="parts-select-step">
-            <label for="one">Тип детали</label>
-            <select name="producer" id="one">
-                <option value="hey">Body lighten pack 1</option>
-                <option value="you">American</option>
-                <option value="out">Banner</option>
-                <option value="there">Bars</option>
-                <option value="In">Bolt</option>
-            </select>
+    <div class="search-sort-block">
+        <span>Сортировка</span>
+        <div class="sort-btns clearfix">
+            <div id="sort-btn-price" class="sort-btn">
+                <input checked="" id="sort-price" name="sorter" type="radio"><label for="sort-price">По цене</label>
+            </div>
+            <div id="sort-btn-delivery" class="sort-btn">
+                <input id="sort-delivery" name="sorter" type="radio"><label for="sort-delivery">По доставке</label>
+            </div>
         </div>
     </div>
 
-    <div class="parts-select-buttons">
-        <a href="#0">Очистить</a>
-        <a href="#0">Подобрать</a>
+    <div class="search-producers-block">
+        <button id="search-producers-block__producers-trigger" class="search-producers-block__producers-trigger">Выберите производителей</button>
+        <div class="search-producers-list clearfix">
+            <div class="search-producer-item">
+                <input id="NAMCO" type="checkbox"><label for="NAMCO">NAMCO</label>
+            </div>
+            <div class="search-producer-item">
+                <input id="Square Enix" type="checkbox"><label for="Square Enix">Square Enix</label>
+            </div>
+            <div class="search-producer-item">
+                <input id="Electronic Arts" type="checkbox"><label for="Electronic Arts">Electronic Arts</label>
+            </div>
+            <div class="search-producer-item">
+                <input id="Rockstar" type="checkbox"><label for="Rockstar">Rockstar</label>
+            </div>
+            <div class="search-producer-item">
+                <input id="Team ICO" type="checkbox"><label for="Team ICO">Team ICO</label>
+            </div>
+        </div>
     </div>
 
 
-    <div class="m21-parts-select-results">
+
+    <div id="m21-parts-select-results" class="m21-parts-select-results">
         <div class="m21-parts-select__item">
             <div class="item-name">Аккумуляторная батарея Sznajder Plussia 60033</div>
             <div class="clearfix">
@@ -167,9 +163,56 @@
         </div>
     </div>
 
-
+    <div id="m21-parts-select__item-modal" class="m21-parts-select__item-modal">
+        <div class="m21-parts-select__item-modal_wrapper">
+        <div id="m21-parts-select__item-modal_close" class="m21-parts-select__item-modal_close">x</div>
+            <div class="item-modal__img"></div>
+            <div class="item-modal__name">Аккумуляторная батарея Banner Starting Bull 56010</div>
+            <table class="item-modal__table">
+                <tr>
+                    <td>Артикул</td>
+                    <td>56008</td>
+                </tr>
+                <tr>
+                    <td>Производитель</td>
+                    <td>Banner</td>
+                </tr>
+                <tr>
+                    <td>Габариты, мм</td>
+                    <td>241x546x122</td>
+                </tr>
+                <tr>
+                    <td>Тип клемм</td>
+                    <td>T1</td>
+                </tr>
+                <tr>
+                    <td>Емкость, А/ч</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Пусковой ток, А</td>
+                    <td>480</td>
+                </tr>
+                <tr>
+                    <td>Полярность</td>
+                    <td>обратная</td>
+                </tr>
+            </table>
+            <div class="item-modal__buy clearfix">
+                <div class="item-modal__buy_price">
+                    р. 5483.56
+                </div>
+                <div class="item-modal__buy_btn">
+                    <a href="#">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
+
+
+
 
 
 
