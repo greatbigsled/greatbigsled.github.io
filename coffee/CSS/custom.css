@@ -1,7 +1,8 @@
 body {
-	background-image: url("../images/ricepaper.png");
+	background-image: url("../images/coffee-beans-top.png"), url("../images/ricepaper.png");
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	background-repeat: no-repeat, repeat;
 }
 .container-fluid {
 	padding: 0;
@@ -16,6 +17,10 @@ body {
 	background: #fff;
 }
 
+
+header.header {
+	margin-top: 35px;
+}
 /*  header-top  */
 .header-top {
 	margin-bottom: 20px;
@@ -26,6 +31,7 @@ body {
 	font-family: 'Lobster', cursive;
 	color: #e4251d;
 	vertical-align: middle;
+	font-size: 16px;
 }
 
 
@@ -204,6 +210,10 @@ body {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	width: 80%;
+}
+.offer-item__btn:hover .btn {
+	color: #fff;
+	background-color: #fc4a26;
 }
 
 
