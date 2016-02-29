@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Кофе Италии - надежная кофейная компания</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -66,7 +68,14 @@
 		    	    <li><a href="#">Реквизиты</a></li>
 		    	</ul>
 
+	    	    
 		    </div>
+		    	    	    <form class="navbar-form-my navbar-left" role="search">
+		        	            <div class="form-group-my">
+		        	                <input type="text" class="form-control-my" placeholder="Искать">
+		    	    	            <button type="submit" class="btn btn-default"></button>
+		        	            </div>
+		    				</form>
 		</div>
 	</header>
 
@@ -75,41 +84,47 @@
 <div class="big-wrapper shadow-wrapper">
 
 	<div class="hero-slider container-fluid">
-		<div class="row">
-<!-- 			<div class="col-sm-6">
- 				<span class="hero-title-type">Акция</span>
-				<h3>
-					Эксклюзивный чай SVAY
-					<small>и бесплатная посуда к нему</small>
-				</h3>
-				<a class="hero-slider__btn">
-					Принять участие 
-				</a>
+		<!-- <div class="row"> -->
+			<button class="swipe-slider-btn swipe-slider-prev" onclick="mySwipe.prev()">prev</button>
+			<div id="hero-slider" class="swipe">
+			<div class="swipe-wrap hero-slider__items">
+					<a class="hero-slider__item" href="#">
+						<img src="images/banner1.jpg" alt="">
+					</a>
+					<a class="hero-slider__item" href="#">
+						<img src="images/banner1.jpg" alt="">
+					</a>
+					<a class="hero-slider__item" href="#">
+						<img src="images/banner1.jpg" alt="">
+					</a>
+					<a class="hero-slider__item" href="#">
+						<img src="images/banner1.jpg" alt="">
+					</a>
 			</div>
-			<div class="col-sm-6">
-				asdfsdfsdd
-			</div> -->
-			<div class="hero-slider__items">
-				<a class="hero-slider__item" href="#"></a>
 			</div>
-		</div>
+			<button class="swipe-slider-btn swipe-slider-next" onclick="mySwipe.next()">next</button>
+
+
+		<!-- </div> -->
 	</div>
 
 
 	<main class="main container-fluid">
 	<div class="row">
 
-		<ul class="main-side-nav nav nav-pills nav-stacked col-sm-2">
-			<li role="presentation" class="main-side-nav__link"><a href="#">Кофемашины</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Кофеварки</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Сиропы <br> Топпинги</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Чай</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Кофе</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Ремонт <br> кофемашин</a></li>
-			<li class="main-side-nav__link" role="presentation"><a href="#">Аренда <br> кофемашин</a></li>
+		<ul class="main-side-nav nav nav-pills nav-stacked col-md-3 col-sm-4">
+				<li class="main-side-nav__link" role="presentation" ><a href="#"><span>Кофемашины</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Кофеварки</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Сиропы <br> Топпинги</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Чай</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Кофе</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Ремонт <br> кофемашин</span></a></li>
+				<li class="main-side-nav__link" role="presentation"><a href="#"><span>Аренда <br> кофемашин</span></a></li>
 		</ul>
  		
- 		<div class="offers-block-wrapper col-sm-10">
+ 		<div class="col-md-9 col-sm-8">
+
+ 		<div class="offers-block-wrapper">
  			
 			<div class="offers-block best-offers">
 				<div class="offers-title">Актуальные предложения</div>
@@ -187,7 +202,7 @@
 
 
 
- 		<div class="offers-block-wrapper col-sm-10">
+ 		<div class="offers-block-wrapper">
  			
 			<div class="offers-block special-offer">
 				<div class="offers-title">Акция "10% на SVAY"</div>
@@ -227,7 +242,7 @@
 
 					<div class="offers-item__wrapper col-md-3 col-sm-6">
 						<div class="offers-item">
-							<div class="offers-item__title"><a href="#">SVAY зеленый<br> с мелиссой и корицей</a></div>
+							<div class="offers-item__title"><a href="#">SVAY зеленый<br> с корицей</a></div>
 							<div class="offer-item__image">
 		                        <img src="images/tea-offer-3.png" alt="">
 		                    </div>
@@ -243,7 +258,7 @@
 
 					<div class="offers-item__wrapper col-md-3 col-sm-6">
 						<div class="offers-item">
-							<div class="offers-item__title"><a href="#">SVAY Grande Expresso<br> с малиной</a></div>
+							<div class="offers-item__title"><a href="#">SVAY Grande<br> с малиной</a></div>
 							<div class="offer-item__image">
 		                        <img src="images/tea-offer-1.png" alt="">
 		                    </div>
@@ -261,6 +276,8 @@
 			</div>
 
         </div>
+
+        </div> <!-- offers wrapper end -->
 
 	</div>
 
@@ -365,6 +382,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="scripts/swipe.js"></script>
 </body>
 
 </html>
