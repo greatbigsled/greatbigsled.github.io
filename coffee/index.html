@@ -38,44 +38,36 @@
 				Пн-Пт с 9-00 до 18-00
 			</div>
 		</div>
-		<div class="header-nav navbar navbar-default row" role="navigation">
-			<div class="navbar-toggler">
-			     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			     </button>
-		    </div>
-		    <div class="header-nav-links collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		    	<ul class="nav navbar-nav">
-		    	    <li><a href="#">О компании</a></li>
-		    	    <li><a href="#">Доставка</a></li>
-		    	    <li class="dropdown">
-		    	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Сервис<span class="caret"></span></a>
-		    	        <ul class="dropdown-menu">
-		    	            <li><a href="#">Action</a></li>
-		    	            <li><a href="#">Another action</a></li>
-		    	            <li><a href="#">Something else here</a></li>
-		    	            <li role="separator" class="divider"></li>
-		    	            <li><a href="#">Separated link</a></li>
-		    	            <li role="separator" class="divider"></li>
-		    	            <li><a href="#">One more separated link</a></li>
-		    	        </ul>
-		    	    </li>
-		    	    <li><a href="#">Гарантии</a></li>
-		    	    <li><a href="#">Контакты</a></li>
-		    	    <li><a href="#">Реквизиты</a></li>
-		    	</ul>
+		<div class="top-menu clearfix">
+			<div class="top-menu-search-block">
+			    <form action="#" id="search-form" method="get">
+			        <input type="search" name="s" placeholder="Поиск..." style="">
+			        <input type="hidden" value="submit" style="">
+			    </form>
+			</div>
 
-	    	    
+		    <div class="top-menu-wrapp">
+		        <div id="top-menu-toggler" class="top-menu-toggler">
+		            <span></span>
+		        </div>
 		    </div>
-		    	    	    <form class="navbar-form-my navbar-left" role="search">
-		        	            <div class="form-group-my">
-		        	                <input type="text" class="form-control-my" placeholder="Искать">
-		    	    	            <button type="submit" class="btn btn-default"></button>
-		        	            </div>
-		    				</form>
+		    <ul id="top-menu-list" class="top-menu__list">
+		        <li class="top-menu__item"><a href="#">О компании</a></li>
+		        <li class="top-menu__item"><a href="#">Доставка</a></li>
+		        <li class="top-menu__item">
+		            <a href="#">Сервис</a>
+		            <ul class="top-submenu">
+		                <li class="top-submenu__item"><a href="#">Один</a></li>
+		                <li class="top-submenu__item"><a href="#">Два</a></li>
+		                <li class="top-submenu__item"><a href="#">Девятнадцать</a></li>
+		                <li class="top-submenu__item"><a href="#">Пятьдесят шесть</a></li>
+		            </ul>
+		        </li>
+		        <li class="top-menu__item"><a href="#">Гарантии</a></li>
+		        <li class="top-menu__item"><a href="#">Контакты</a></li>
+		        <li class="top-menu__item"><a href="#">Реквизиты</a></li>
+		    </ul>
+		    
 		</div>
 	</header>
 
@@ -383,6 +375,7 @@
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="scripts/swipe.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 
 </html>
