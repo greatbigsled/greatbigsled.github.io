@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+
+	background-color: #ffeb3b;
+	color: #222;
+}
+
+
+.site-header {
+	padding: 1em 2em;
+	background-color: #222;
+	color: #fff;
+}
+.site-header a {
+	color: #fff;
+}
+.logo-block {
+	display: inline-block;
+	margin-right: 2em;
+
+	text-decoration: none;
+	color: #000;
+}
+.logo-image {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .5em;
+
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+
+	background-image: url("../img/logo.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.nav-list {
+	display: inline-block;
+}
+.nav-item {
+	position: relative;
+	padding: .5em;
+	font-size: 14px;
+
+    text-decoration: none;
+}
+.nav-item::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: rgba(255,255,255,.2);
+	bottom: .35em;
+	left: 5%;
+	transition: all .6s;
+	opacity: 0;
+}
+.nav-item:hover::after {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: 1;
+}
+
+
+.main {
+	margin: 1em auto;
+	max-width: 36em;
+	background-color: #ffeb3b;
+	color: #222;
+}
+
+
+.cube{
+	width: 1em;
+	height: 1em;
+	background-color: green;
+}
