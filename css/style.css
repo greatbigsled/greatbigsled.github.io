@@ -68,15 +68,9 @@ body {
 
 
 .main {
-	margin: 1em auto;
+	margin: 1em;
+	margin-left: 2em;
 	max-width: 36em;
 	background-color: #ffeb3b;
 	color: #222;
-}
-
-
-.cube{
-	width: 1em;
-	height: 1em;
-	background-color: green;
 }
