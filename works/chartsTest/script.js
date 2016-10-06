@@ -24,11 +24,12 @@ let scatterData = [
 // *****************************************************************************
 // helper object
 let c = {};
-c.drawLine = function drawLine(ctx, x0, y0, x1, y1){
+c.drawLine = function drawLine(ctx, x0, y0, x1, y1, {color='#000', width=1}){
     ctx.beginPath();
     ctx.moveTo(x0, y0);
     ctx.lineTo(x1, y1);
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
     ctx.stroke();
 };
 c.drawRect = function drawRect(ctx, x, y, w, h){
@@ -40,7 +41,14 @@ c.drawRect = function drawRect(ctx, x, y, w, h){
     ctx.strokeWidth = 2;
     ctx.stroke();
 };
-
+c.drawTxt = function drawTxt( ctx, text, x, y, { baseline='middle', align='center', color='#000', size='16px', width=1 } ){
+    ctx.strokeStyle = color;
+    ctx.font = size + 'sans-serif';
+    ctx.textBaseline = baseline;
+    ctx.textAlign = align;
+    ctx.lineWidth = width;
+    ctx.strokeText(text, x, y);
+}
 
 
 
@@ -78,6 +86,9 @@ c.drawRect = function drawRect(ctx, x, y, w, h){
 // main
 let canvasOpts = getCanvasOptions(50);
 
+canvas.setAttribute('width', canvasOpts.realPageW);
+canvas.setAttribute('height', canvasOpts.realPageH);
+
 function getCanvasOptions(padding){
     let out = {};
 
@@ -92,6 +103,7 @@ function getCanvasOptions(padding){
     // координаты нулей по x и y, от которых будет все рисоваться
     out.zeroX = padding;
     out.zeroY = out.pageH + padding;
+    out.padding = padding;
 
     return out;
 }
@@ -131,12 +143,17 @@ function hist(arr, canvas){
 
 
 function drawAxis(xVals, yVals){
-    xVals.map((val, idx)=> {
+    let cellW = canvasOpts.pageW/xVals;
+    let cellH = canvasOpts.pageH/yVals;
 
-    });
-    yVals.map((val, idx)=>{
+    for (let x = 0; x <= xVals; x++) {
+        c.drawTxt(ctx, x, x*cellW+canvasOpts.padding, canvasOpts.pageH+canvasOpts.padding+5, {baseline:'top', align: 'left', size: '14px', width: .2});
+    }
 
-    });
+    for (let y = 0; y <= yVals; y++) {
+    // for (let y = yVals; y >= 0; y--) {
+        c.drawTxt(ctx, yVals-y, canvasOpts.padding-5, y*cellH+canvasOpts.padding, {baseline:'bottom', align: 'right', size: '14px', width: .2});
+    }
 }
 
 // hist(arr, canvas);
@@ -146,12 +163,20 @@ function drawGrid(xSize, ySize){
     let cellW = canvasOpts.pageW/xSize;
     let cellH = canvasOpts.pageH/ySize;
 
-    for (let x = 0; x < xSize; x++) {
-        c.drawLine(ctx, x*cellW, 0, canvasOpts.pageH, 0);
+    let padding = canvasOpts.padding;
+
+    for (let x = 0; x <= xSize; x++) {
+        c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: .25});
+        if (x === 0){
+            c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: 1});
+        }
     }
 
-    for (let y = 0; y < ySize; y++) {
-        c.drawLine(ctx, 0, y*cellH, 0, canvasOpts.pageW);
+    for (let y = 0; y <= ySize; y++) {
+        c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: .25});
+        if (y === ySize){
+            c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: 1});
+        }
     }
 }
 
@@ -171,9 +196,13 @@ function scatter(data){
     });
 
     drawGrid(dataMaxX, dataMaxY);
+    drawAxis(dataMaxX, dataMaxY);
+
 }
 
 scatter(scatterData);
+
+// drawGrid(4,3);
 
 
 
