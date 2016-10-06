@@ -1,7 +1,100 @@
 let canvas  = document.getElementById('graph-canvas');
+let ctx     = canvas.getContext('2d');
 
 
-let arr = [1, 2, 2, 2, 3, 3, 4, 5];
+let scatterData = [
+        {x: 10, y: 10, r: 37},
+        {x: 20, y: 11.2, r: 2},
+        {x: 22, y: 31, r: 17},
+        {x: 40, y: 5.7, r: 11},
+        {x: 32, y: 11, r: 28}
+];
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************************************************
+// *****************************************************************************
+// helper object
+let c = {};
+c.drawLine = function drawLine(ctx, x0, y0, x1, y1){
+    ctx.beginPath();
+    ctx.moveTo(x0, y0);
+    ctx.lineTo(x1, y1);
+    ctx.strokeStyle = '#000';
+    ctx.stroke();
+};
+c.drawRect = function drawRect(ctx, x, y, w, h){
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.fillStyle = '#bacaba';
+    ctx.fill();
+    ctx.strokeStyle = '#515851';
+    ctx.strokeWidth = 2;
+    ctx.stroke();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************************************************
+// *****************************************************************************
+// main
+let canvasOpts = getCanvasOptions(50);
+
+function getCanvasOptions(padding){
+    let out = {};
+
+    // реальные размеры страницы
+    out.realPageW = document.documentElement.clientWidth;
+    out.realPageH = document.documentElement.clientHeight;
+
+    // размеры где будет рисоваться график
+    out.pageW = out.realPageW - padding*2;
+    out.pageH = out.realPageH - padding*2;
+
+    // координаты нулей по x и y, от которых будет все рисоваться
+    out.zeroX = padding;
+    out.zeroY = out.pageH + padding;
+
+    return out;
+}
 
 function hist(arr, canvas){
     let xCount = arr.length,
@@ -32,37 +125,95 @@ function hist(arr, canvas){
         y = pageHeight - vStepSize;
         idx += 1;
 
-        drawRect(ctx, val, x, y, idx, stepSize, vStepSize);
+        c.drawRect(ctx, x, y, stepSize, -val*vStepSize);
     });
 }
 
-function drawGrid(ctx, width, height, cellW, cellH, countX, countY) {
-    for (let x = 0; x < countX; x++) {
-        ctx.beginPath();
-        ctx.moveTo(cellW*x, 0);
-        ctx.lineTo(cellW*x, height);
-        ctx.strokeStyle = '#ededed';
-        ctx.stroke();
+
+function drawAxis(xVals, yVals){
+    xVals.map((val, idx)=> {
+
+    });
+    yVals.map((val, idx)=>{
+
+    });
+}
+
+// hist(arr, canvas);
+
+
+function drawGrid(xSize, ySize){
+    let cellW = canvasOpts.pageW/xSize;
+    let cellH = canvasOpts.pageH/ySize;
+
+    for (let x = 0; x < xSize; x++) {
+        c.drawLine(ctx, x*cellW, 0, canvasOpts.pageH, 0);
     }
 
-    for (let y = 0; y < countY; y++) {
-        ctx.beginPath();
-        ctx.moveTo(0, cellH*y);
-        ctx.lineTo(width, cellH*y);
-        // ctx.strokeStyle = '#ededed';
-        ctx.stroke();
+    for (let y = 0; y < ySize; y++) {
+        c.drawLine(ctx, 0, y*cellH, 0, canvasOpts.pageW);
     }
 }
 
-function drawRect(ctx, val, x, y, idx, stepSize, vStepSize) {
-    ctx.beginPath();
-    ctx.rect(x, y, stepSize, -val*vStepSize);
-    ctx.fillStyle = '#bacaba';
-    ctx.fill();
-    ctx.strokeStyle = '#515851';
-    ctx.strokeWidth = 2;
-    ctx.stroke();
-    // ctx.rect(x, y, width, height)
+function scatter(data){
+
+    let dataMaxX = 0,
+        dataMaxY = 0;
+
+    data.map(obj=>{
+        if(obj.x > dataMaxX)
+            dataMaxX = obj.x;
+    });
+
+    data.map(obj=>{
+        if(obj.y > dataMaxY)
+            dataMaxY = obj.y;
+    });
+
+    drawGrid(dataMaxX, dataMaxY);
 }
 
-hist(arr, canvas);
+scatter(scatterData);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
