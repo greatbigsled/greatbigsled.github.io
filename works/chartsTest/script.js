@@ -18,14 +18,7 @@ let lineData = {
     13: [21, 34, 6],
     21: [6, 7, 8]
 };
-let stackedBarData = [
-    ['jan', 1, 4, 5, 6],
-    ['jan', 2, 3, 5, 6],
-    ['jan', 3, 10, 11],
-    ['mar', 4, 9, 7, 10],
-    ['may', 3, 10, 8, 1],
-    ['sep', 11, 1, 9, 0]
-];
+
 
 
 
@@ -47,14 +40,16 @@ c.drawLine = function drawLine(ctx, x0, y0, x1, y1, {color='#000', width=1}){
     ctx.stroke();
 }
 
-c.drawRect = function drawRect(ctx, x, y, w, h, {fillStyle='#bacaba', strokeWidth=2, strokeStyle='515851'}){
+c.drawRect = function drawRect(ctx, x, y, w, h, {fillStyle='#bacaba', strokeWidth=2, strokeStyle='515851', isStroke=true}){
     ctx.beginPath();
     ctx.rect(x, y, w, h);
     ctx.fillStyle = fillStyle;
     ctx.fill();
-    ctx.strokeStyle = strokeStyle;
-    ctx.strokeWidth = strokeWidth;
-    ctx.stroke();
+    if (isStroke) {
+        ctx.strokeStyle = strokeStyle;
+        ctx.strokeWidth = strokeWidth;
+        ctx.stroke();
+    }
 }
 
 c.drawTxt = function drawTxt( ctx, text, x, y, { baseline='middle', align='center', color='#000', size='16px', width=1 } ){
@@ -84,6 +79,45 @@ c.drawCircle = function drawCircle(ctx, {x, y, r, fillStyle='green', strokeStyle
 }
 
 
+
+
+// CANVAS GRID & AXIS
+function drawAxis(xVals, yVals, {xTxt, yTxt}){
+    let cellW = canvasOpts.pageW/xVals;
+    let cellH = canvasOpts.pageH/yVals;
+
+    for (let x = 0; x <= xVals; x++) {
+        c.drawTxt(ctx, xTxt ? xTxt[x] : x, x*cellW+canvasOpts.padding, canvasOpts.pageH+canvasOpts.padding+5, {baseline:'top', align: 'left', size: '14px', width: .2});
+    }
+
+    for (let y = 0; y <= yVals; y++) {
+    // for (let y = yVals; y >= 0; y--) {
+        c.drawTxt(ctx, yTxt ? yTxt[yVals-y] : yVals-y, canvasOpts.padding-5, y*cellH+canvasOpts.padding, {baseline:'bottom', align: 'right', size: '14px', width: .2});
+    }
+}
+
+
+
+function drawGrid(xSize, ySize){
+    let cellW = canvasOpts.pageW/xSize;
+    let cellH = canvasOpts.pageH/ySize;
+
+    let padding = canvasOpts.padding;
+
+    for (let x = 0; x <= xSize; x++) {
+        c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: .25});
+        if (x === 0){
+            c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: 1});
+        }
+    }
+
+    for (let y = 0; y <= ySize; y++) {
+        c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: .25});
+        if (y === ySize){
+            c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: 1});
+        }
+    }
+}
 
 
 
@@ -116,7 +150,7 @@ c.drawCircle = function drawCircle(ctx, {x, y, r, fillStyle='green', strokeStyle
 // *****************************************************************************
 // *****************************************************************************
 // main
-let canvasOpts = getCanvasOptions(50);
+let canvasOpts = getCanvasOptions(40);
 
 canvas.setAttribute('width', canvasOpts.realPageW);
 canvas.setAttribute('height', canvasOpts.realPageH);
@@ -140,7 +174,16 @@ function getCanvasOptions(padding){
     return out;
 }
 
-function hist(arr, canvas){
+
+
+
+
+
+
+// *****************************************************************************
+// *****************************************************************************
+// HISTOGRAM
+function hist(ctx, arr){
     let xCount = arr.length,
         yCount = Math.max.apply(null, arr);
 
@@ -154,10 +197,7 @@ function hist(arr, canvas){
     let stepSize = pageWidth/(xCount+2),
         vStepSize = pageHeight/(yCount+2);
 
-    let ctx = canvas.getContext('2d');
 
-
-    console.log(xCount, yCount);
 
     drawGrid(ctx, pageWidth, pageHeight, stepSize, vStepSize, xCount+2, yCount+2);
 
@@ -169,50 +209,21 @@ function hist(arr, canvas){
         y = pageHeight - vStepSize;
         idx += 1;
 
-        c.drawRect(ctx, x, y, stepSize, -val*vStepSize);
+        c.drawRect(ctx, x, y, stepSize, -val*vStepSize, {});
     });
 }
 
-
-function drawAxis(xVals, yVals, {xTxt, yTxt}){
-    let cellW = canvasOpts.pageW/xVals;
-    let cellH = canvasOpts.pageH/yVals;
-
-    for (let x = 0; x <= xVals; x++) {
-        c.drawTxt(ctx, xTxt ? xTxt[x] : x, x*cellW+canvasOpts.padding, canvasOpts.pageH+canvasOpts.padding+5, {baseline:'top', align: 'left', size: '14px', width: .2});
-    }
-
-    for (let y = 0; y <= yVals; y++) {
-    // for (let y = yVals; y >= 0; y--) {
-        c.drawTxt(ctx, yTxt ? yTxt[yVals-y] : yVals-y, canvasOpts.padding-5, y*cellH+canvasOpts.padding, {baseline:'bottom', align: 'right', size: '14px', width: .2});
-    }
-}
-
-// hist(arr, canvas);
+let histData = [1, 2, 2, 2, 3, 3, 4, 5];
+// hist(ctx, histData);
 
 
-function drawGrid(xSize, ySize){
-    let cellW = canvasOpts.pageW/xSize;
-    let cellH = canvasOpts.pageH/ySize;
-
-    let padding = canvasOpts.padding;
-
-    for (let x = 0; x <= xSize; x++) {
-        c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: .25});
-        if (x === 0){
-            c.drawLine(ctx, x*cellW+padding, padding, x*cellW+padding, canvasOpts.pageH+padding, {width: 1});
-        }
-    }
-
-    for (let y = 0; y <= ySize; y++) {
-        c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: .25});
-        if (y === ySize){
-            c.drawLine(ctx, padding, y*cellH+padding, canvasOpts.pageW+padding, y*cellH+padding, {width: 1});
-        }
-    }
-}
 
 
+
+
+// *****************************************************************************
+// *****************************************************************************
+// SCATTER
 function drawScatterElem(ctx, data, {fillStyle= 'green', lineWidth=1, strokeStyle='#000'}){
     ctx.beginPath();
     ctx.arc(data.x, data.y, data.r, 0, 2*Math.PI, false);
@@ -263,6 +274,11 @@ function scatter(data){
 scatter(scatterData);
 
 
+
+
+// *****************************************************************************
+// *****************************************************************************
+// LINE CHART
 function drawLineChart(data){
     let dataMaxX = 0,
         dataMaxY = 0;
@@ -291,6 +307,11 @@ function drawLineChart(data){
 
 // drawLineChart(lineData);
 
+
+
+// *****************************************************************************
+// *****************************************************************************
+// STACKED BAR
 function drawStackedBar(data){
     let env = {};
     env.mx = 0,
@@ -299,7 +320,7 @@ function drawStackedBar(data){
     env.my = data.length;
 
     data.map(val=>{
-        let mx = Math.max.apply(null, val.slice(1));
+        let mx = val.slice(1).reduce((a,b)=>{return a+b;});
         if (mx > env.mx){
             env.mx = mx;
         }
@@ -317,15 +338,31 @@ function drawStackedBar(data){
     drawAxis(env.mx, env.my, {yTxt});
 
     for (var i = 0; i < data.length; i++) {
-        let chunk = data[i];
-        let valueStart = 0;
-        chunk.slice(0).map((val, idx) =>{
-            c.drawRect(ctx, env.x*valueStart+padding, canvasOpts.realPageH - (env.y*i+ padding), env.x*(val) )
-        })
+        let chunk = data[i].slice(1);
+        let startXValue = 0;
+
+        chunk.map((val, idx) =>{
+            let x = env.x*startXValue + padding,
+                y = canvasOpts.realPageH - (env.y*i+padding),
+                w = env.x*val,
+                h = -(env.y);
+
+            c.drawRect(ctx, x, y, w, h, {fillStyle: SEXY_COLORS[idx], strokeWidth: 1});
+            c.drawTxt(ctx, val, x+w/2, y+h/2, {size: '18px'});
+            startXValue += val;
+
+        });
     }
 }
 
-
+let stackedBarData = [
+    ['jan', 1, 4, 5, 6],
+    ['jan', 2, 3, 5, 6],
+    ['jan', 3, 10, 11],
+    ['mar', 4, 9, 7, 10],
+    ['may', 3, 10, 8, 1],
+    ['sep', 11, 1, 9, 0]
+];
 // drawStackedBar(stackedBarData);
 
 
