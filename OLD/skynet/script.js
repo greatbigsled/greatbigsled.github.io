@@ -1,1 +1,0 @@
-window.sr = new scrollReveal();
